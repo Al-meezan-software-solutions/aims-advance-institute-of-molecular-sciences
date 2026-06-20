@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Brand palette ── */
+  --color-navy:        #0B3450;
+  --color-navy-light:  #164e78;
+  --color-paper:       #F6FAFB;
+  --color-white:       #ffffff;
+  --color-grey-50:     #F8F9FA;
+  --color-grey-100:    #EEF1F4;
+  --color-grey-200:    #DDE2E8;
+  --color-grey-600:    #6B7A8D;
+  --color-grey-800:    #2D3748;
+  --color-teal:        #2BB7C4;
+  --color-teal-dark:   #1e9aa6;
+  --color-lime:        #80B93C;
+
+  /* ── Unit accent colours ── */
+  --color-unit1:       #5E8C3A;
+  --color-unit2:       #2F6FB0;
+  --color-unit3:       #9C7349;
+  --color-unit4:       #C24E72;
+  --color-unit5:       #6750A4;
+
+  /* ── Typography (CSS vars from next/font) ── */
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body:    var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* ── Base reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: #ffffff;
+  color: #2D3748;
+  color-scheme: light;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Accessibility ──────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+:focus-visible {
+  outline: 2px solid #2BB7C4;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Scroll reveal ──────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(.16,1,.3,1), transform 0.6s cubic-bezier(.16,1,.3,1);
+}
+.reveal.in-view { opacity: 1; transform: translateY(0); }
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.6s cubic-bezier(.16,1,.3,1), transform 0.6s cubic-bezier(.16,1,.3,1);
+}
+.reveal-left.in-view { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.6s cubic-bezier(.16,1,.3,1), transform 0.6s cubic-bezier(.16,1,.3,1);
+}
+.reveal-right.in-view { opacity: 1; transform: translateX(0); }
+
+/* ── Typography helpers ─────────────────────────────────────── */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.stat-num {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.instrument-item { font-family: var(--font-mono); font-size: 0.8rem; }
+
+/* ── Nav ────────────────────────────────────────────────────── */
+#main-nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ── DNA strand ─────────────────────────────────────────────── */
+#dna-strand {
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 44px;
+  height: 100vh;
+  z-index: 30;
+}
+@media (max-width: 1024px) { #dna-strand { display: none; } }
+
+/* ── Card hover lift ────────────────────────────────────────── */
+.card-lift {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(11,52,80,0.10);
+}
+
+/* ── Section divider line ───────────────────────────────────── */
+.section-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+
+/* ── Hex motif ──────────────────────────────────────────────── */
+.hex-motif { pointer-events: none; user-select: none; }
+
+/* ── Gradient text ──────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #0B3450 0%, #2BB7C4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
