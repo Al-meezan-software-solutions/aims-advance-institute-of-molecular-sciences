@@ -1,4 +1,5 @@
 import { SERVICES, UNITS_ACCENT } from '@/lib/data';
+import Link from 'next/link';
 import ScrollReveal from '@/components/ScrollReveal';
 import { MolecularGraph, PetriRings, RibbonDiagram, HexLattice, HelixRibbon } from '@/components/SvgMotifs';
 
@@ -94,8 +95,8 @@ export default function Services() {
                   </div>
 
                   {/* Bullet list */}
-                  <div className="p-6 flex-1">
-                    <ul className="space-y-2.5" aria-label={`${svc.domain} capabilities`}>
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <ul className="space-y-2.5 mb-6" aria-label={`${svc.domain} capabilities`}>
                       {svc.bullets.map(bullet => (
                         <li key={bullet} className="flex gap-2.5 items-start">
                           <span
@@ -107,6 +108,16 @@ export default function Services() {
                         </li>
                       ))}
                     </ul>
+                    <Link
+                      href={`/services/${svc.id}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold hover:underline mt-auto"
+                      style={{ color: accent.color }}
+                    >
+                      Read full details
+                      <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor">
+                        <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z" />
+                      </svg>
+                    </Link>
                   </div>
 
                   {/* Bottom accent line */}

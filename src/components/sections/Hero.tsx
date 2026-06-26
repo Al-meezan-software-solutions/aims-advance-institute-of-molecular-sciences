@@ -77,7 +77,7 @@ export default function Hero() {
               letterSpacing: '0.02em',
             }}
           >
-            Your Partner in Growth!
+            For Quality Life
           </p>
 
           <p className="text-slate-600 mb-10 leading-relaxed max-w-lg"
@@ -142,7 +142,7 @@ export default function Hero() {
                 {/* Accent dot */}
                 <div
                   className="mt-3 w-6 h-1 rounded-full"
-                  style={{ background: ['#2BB7C4','#80B93C','#5E8C3A','#2F6FB0'][i % 4] }}
+                  style={{ background: ['#2BB7C4', '#80B93C', '#5E8C3A', '#2F6FB0'][i % 4] }}
                   aria-hidden="true"
                 />
               </div>

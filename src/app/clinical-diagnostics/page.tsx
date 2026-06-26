@@ -9,42 +9,6 @@ export const metadata: Metadata = {
     'Advanced molecular diagnostics covering Human Diagnostics and Veterinary Diagnostics. Fast, precise, and quality-assured DNA/RNA pathogen testing.',
 };
 
-const HUMAN_DIAGNOSTICS = [
-  {
-    title: 'Pathogen Detection Panels',
-    description: 'High-throughput real-time PCR panels for fast and accurate identification of viral, bacterial, and fungal pathogens in clinical samples.',
-    tests: ['Respiratory Virus Panels (Flu, RSV, SARS-CoV-2)', 'Gastrointestinal Pathogen Screens', 'Sexually Transmitted Infections (STI) Multiplex PCR', 'Fungal Genotyping and Resistance Profiling'],
-  },
-  {
-    title: 'Genetic Screening & Predisposition',
-    description: 'Targeted molecular assays to screen for genetic mutations, hereditary disease markers, and pharmacogenomic drug-sensitivity factors.',
-    tests: ['BRCA1/BRCA2 Hereditary Cancer Mutations', 'Cardiovascular Risk Predisposition', 'Thrombophilia Mutation Assays', 'Custom Gene-Variant Profiling'],
-  },
-  {
-    title: 'Oncology Biomarkers & Circulating DNA',
-    description: 'Sensitive detection of tumor biomarkers and cell-free DNA (cfDNA) variants for early detection, prognosis, and therapeutic monitoring.',
-    tests: ['EGFR / KRAS Variant Assays', 'Quantitative Tumor Marker Quantification', 'Minimal Residual Disease (MRD) Tracking', 'Immunological Cytokine Profiling'],
-  },
-];
-
-const VET_DIAGNOSTICS = [
-  {
-    title: 'Livestock Pathogen Surveillance',
-    description: 'High-accuracy screening protocols for major infectious diseases in sheep, cattle, goats, and poultry to support herd management and export security.',
-    tests: ['Foot-and-Mouth Disease (FMD) Screening', 'Brucellosis Molecular Diagnostics', 'Avian Influenza Genotype Assays', 'Mastitis Pathogen qPCR Panels'],
-  },
-  {
-    title: 'Companion Animal Diagnostics',
-    description: 'PCR-based screening panels for dogs and cats, offering early and precise pathogen identification compared to traditional culture methods.',
-    tests: ['Canine Parvovirus & Coronavirus qPCR', 'Feline Leukemia Virus (FeLV) / FIV Molecular Assay', 'Tick-Borne Pathogen Multiplex Screen', 'Respiratory and Gastrointestinal PCR Panels'],
-  },
-  {
-    title: 'Aquaculture & Avian Health',
-    description: 'Diagnostics for shrimp, fish, and avian species, addressing critical pathogens that impact high-value livestock and aquaculture sectors.',
-    tests: ['White Spot Syndrome Virus (WSSV) in Shrimp', 'Tilapia Lake Virus qPCR', 'Newcastle Disease Virus (NDV) Screening', 'Marek’s Disease Virus (MDV) Genotyping'],
-  },
-];
-
 export default function ClinicalDiagnosticsPage() {
   return (
     <>
@@ -63,7 +27,7 @@ export default function ClinicalDiagnosticsPage() {
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-6 h-px bg-[#0D9488]" aria-hidden="true" />
-              <span className="eyebrow text-[#0D9488]">Molecular Diagnostics</span>
+              <span className="eyebrow text-[#0D9488]">Molecular &amp; Clinical Diagnostics</span>
               <span className="w-6 h-px bg-[#0D9488]" aria-hidden="true" />
             </div>
             <h1
@@ -74,168 +38,98 @@ export default function ClinicalDiagnosticsPage() {
               Clinical Diagnostic Services
             </h1>
             <p className="text-white/70 max-w-2xl mx-auto leading-relaxed text-sm lg:text-base">
-              Providing fast, precise, and quality-assured molecular testing across Human Diagnostics 
-              and Veterinary Diagnostics domains, utilizing certified WHO/ISO-aligned protocols.
+              Delivering authoritative diagnostic testing using certified, WHO/ISO-aligned protocols 
+              under rigorous biosafety and quality-assurance systems.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ── Human Diagnostics Section ──────────────────────────── */}
-      <section
-        id="human"
-        aria-labelledby="human-heading"
-        className="scroll-mt-20 py-24 lg:py-28 bg-white relative overflow-hidden"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-start">
+      {/* ── Selection Portal ────────────────────────────────────── */}
+      <section className="py-20 lg:py-28 bg-[#F6FAFB] border-b border-gray-150">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             
-            {/* Sidebar Intro */}
-            <div className="lg:col-span-1">
-              <ScrollReveal>
-                <div className="inline-flex items-center gap-2 mb-4">
-                  <span className="w-6 h-px bg-[#0D9488]" aria-hidden="true" />
-                  <span className="eyebrow text-[#0D9488]">Precision Medicine</span>
+            {/* Human Diagnostics Card */}
+            <ScrollReveal>
+              <div
+                className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm card-lift h-full flex flex-col relative p-8 lg:p-10"
+              >
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0D9488]" aria-hidden="true" />
+                <div className="absolute top-6 right-6 opacity-[0.03]" aria-hidden="true">
+                  <PetriRings color="#0D9488" size={150} />
                 </div>
-                <h2
-                  id="human-heading"
-                  className="section-title text-[#0B3450] mb-5 animate-pulse-once"
-                  style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.3rem)' }}
-                >
-                  Human Diagnostics
-                </h2>
-                <p className="text-[#6B7A8D] leading-relaxed mb-6" style={{ fontSize: '0.97rem' }}>
-                  Our human diagnostics services focus on translation molecular research and pathogen 
-                  assays. Using high-sensitivity platforms like real-time qPCR and digital PCR, we detect 
-                  trace targets and genomic variants with unmatched accuracy.
-                </p>
-                <div className="p-4 rounded-xl border border-teal-100 bg-teal-50/30 flex items-start gap-3">
-                  <svg className="shrink-0 text-[#0D9488] mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="16" x2="12" y2="12" />
-                    <line x1="12" y1="8" x2="12.01" y2="8" />
-                  </svg>
-                  <p className="text-slate-650 text-xs leading-relaxed">
-                    All human assays are conducted in restricted biosafety level 2 (BSL-2) areas 
-                    under rigorous clinical validation criteria.
+                
+                <div className="flex-1">
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <span className="w-5 h-px bg-[#0D9488]" aria-hidden="true" />
+                    <span className="eyebrow text-[#0D9488]">Human Health</span>
+                  </div>
+                  <h2
+                    className="font-bold text-[#0B3450] mb-4"
+                    style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem' }}
+                  >
+                    Human Diagnostics
+                  </h2>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-8">
+                    Comprehensive testing suites supporting patient care, pathogen screening, and personalized medicine. 
+                    Includes Hematology, Routine Chemistry, Special Chemistry, Molecular Diagnostics, 
+                    Microbiology, Histopathology, and Cancer Marker Testing.
                   </p>
                 </div>
-              </ScrollReveal>
-            </div>
 
-            {/* Cards Grid */}
-            <div className="lg:col-span-2 space-y-6">
-              {HUMAN_DIAGNOSTICS.map((item, idx) => (
-                <ScrollReveal key={item.title} delay={idx * 75}>
-                  <div
-                    className="p-6 lg:p-8 bg-[#F6FAFB] border border-gray-100 rounded-2xl card-lift flex flex-col sm:flex-row gap-6 relative"
-                  >
-                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#0D9488] rounded-l-2xl" aria-hidden="true" />
-                    <div className="flex-1">
-                      <h3
-                        className="font-bold text-[#0B3450] mb-2"
-                        style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem' }}
-                      >
-                        {item.title}
-                      </h3>
-                      <p className="text-slate-550 text-sm leading-relaxed mb-4">
-                        {item.description}
-                      </p>
-                      <ul className="grid sm:grid-cols-2 gap-2" aria-label={`${item.title} tests`}>
-                        {item.tests.map(test => (
-                          <li key={test} className="flex gap-2 items-center">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#0D9488]" aria-hidden="true" />
-                            <span className="text-[#2D3748] text-xs font-medium">{test}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ── Veterinary Diagnostics Section ────────────────────── */}
-      <section
-        id="veterinary"
-        aria-labelledby="veterinary-heading"
-        className="scroll-mt-20 py-24 lg:py-28 bg-[#F6FAFB] border-t border-b border-gray-150 relative overflow-hidden"
-      >
-        <div className="absolute inset-0 opacity-[0.03]" aria-hidden="true">
-          <HelixRibbon color="#0D9488" size={300} className="absolute bottom-10 left-10" />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-start lg:grid-flow-dense">
-            
-            {/* Sidebar Intro */}
-            <div className="lg:col-span-1 lg:col-start-3">
-              <ScrollReveal>
-                <div className="inline-flex items-center gap-2 mb-4">
-                  <span className="w-6 h-px bg-[#5E8C3A]" aria-hidden="true" />
-                  <span className="eyebrow text-[#5E8C3A]">Animal Health</span>
-                </div>
-                <h2
-                  id="veterinary-heading"
-                  className="section-title text-[#0B3450] mb-5"
-                  style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.3rem)' }}
+                <Link
+                  href="/clinical-diagnostics/human"
+                  className="inline-flex items-center justify-center gap-2 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-sm"
+                  style={{ backgroundColor: '#0D9488', fontFamily: 'var(--font-body)' }}
                 >
-                  Veterinary Diagnostics
-                </h2>
-                <p className="text-[#6B7A8D] leading-relaxed mb-6" style={{ fontSize: '0.97rem' }}>
-                  Protecting livestock yields, poultry health, and companion animals. Our molecular 
-                  veterinary assays offer rapid turnaround times to help farmers, veterinarians, and 
-                  regulators identify pathogens early and control disease transmission.
-                </p>
-                <div className="p-4 rounded-xl border border-[#5E8C3A]/20 bg-[#5E8C3A]/05 flex items-start gap-3">
-                  <svg className="shrink-0 text-[#5E8C3A] mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <line x1="12" y1="16" x2="12" y2="12" />
-                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                  Explore Human Diagnostics
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                    <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z" />
                   </svg>
-                  <p className="text-slate-650 text-xs leading-relaxed">
-                    Our veterinary screens are designed for rapid deployment, allowing diagnostic screening 
-                    directly from serum, blood, tissue, or environmental swabs.
+                </Link>
+              </div>
+            </ScrollReveal>
+
+            {/* Veterinary Diagnostics Card */}
+            <ScrollReveal delay={80}>
+              <div
+                className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm card-lift h-full flex flex-col relative p-8 lg:p-10"
+              >
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#5E8C3A]" aria-hidden="true" />
+                <div className="absolute top-6 right-6 opacity-[0.03]" aria-hidden="true">
+                  <HelixRibbon color="#5E8C3A" size={150} />
+                </div>
+
+                <div className="flex-1">
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <span className="w-5 h-px bg-[#5E8C3A]" aria-hidden="true" />
+                    <span className="eyebrow text-[#5E8C3A]">Animal Health</span>
+                  </div>
+                  <h2
+                    className="font-bold text-[#0B3450] mb-4"
+                    style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem' }}
+                  >
+                    Veterinary Diagnostics
+                  </h2>
+                  <p className="text-slate-550 text-sm leading-relaxed mb-8">
+                    Rapid, high-accuracy molecular diagnostics to screen pathogens, support biosafety audits, 
+                    and protect avian, livestock, companion animal, and aquaculture health.
                   </p>
                 </div>
-              </ScrollReveal>
-            </div>
 
-            {/* Cards Grid */}
-            <div className="lg:col-span-2 lg:col-start-1 space-y-6">
-              {VET_DIAGNOSTICS.map((item, idx) => (
-                <ScrollReveal key={item.title} delay={idx * 75}>
-                  <div
-                    className="p-6 lg:p-8 bg-white border border-gray-100 rounded-2xl card-lift flex flex-col sm:flex-row gap-6 relative"
-                  >
-                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#5E8C3A] rounded-l-2xl" aria-hidden="true" />
-                    <div className="flex-1">
-                      <h3
-                        className="font-bold text-[#0B3450] mb-2"
-                        style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem' }}
-                      >
-                        {item.title}
-                      </h3>
-                      <p className="text-slate-550 text-sm leading-relaxed mb-4">
-                        {item.description}
-                      </p>
-                      <ul className="grid sm:grid-cols-2 gap-2" aria-label={`${item.title} tests`}>
-                        {item.tests.map(test => (
-                          <li key={test} className="flex gap-2 items-center">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#5E8C3A]" aria-hidden="true" />
-                            <span className="text-[#2D3748] text-xs font-medium">{test}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
+                <Link
+                  href="/clinical-diagnostics/veterinary"
+                  className="inline-flex items-center justify-center gap-2 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-sm"
+                  style={{ backgroundColor: '#5E8C3A', fontFamily: 'var(--font-body)' }}
+                >
+                  Explore Veterinary Diagnostics
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                    <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z" />
+                  </svg>
+                </Link>
+              </div>
+            </ScrollReveal>
 
           </div>
         </div>
@@ -246,11 +140,11 @@ export default function ClinicalDiagnosticsPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <ScrollReveal>
             <h2 className="section-title text-[#0B3450] mb-4" style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)' }}>
-              Enquire About Diagnostics Panels
+              Need Assistance with Diagnostics Assays?
             </h2>
             <p className="text-slate-600 mb-8 max-w-lg mx-auto text-sm leading-relaxed">
-              Do you require custom diagnostic assays, clinical validation support, or bulk sampling grids? 
-              Our analytical leads are ready to coordinate with you.
+              If you require custom testing panels, regulatory compliance consultation, or research support, 
+              our laboratory managers are ready to assist.
             </p>
             <div className="flex justify-center gap-4">
               <Link
@@ -258,14 +152,7 @@ export default function ClinicalDiagnosticsPage() {
                 className="inline-flex items-center gap-2 bg-[#0B3450] hover:bg-[#164e78] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 text-sm"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
-                Get Diagnostic Support
-              </Link>
-              <Link
-                href="/instruments"
-                className="inline-flex items-center gap-2 border border-slate-350 hover:border-slate-400 text-slate-700 font-medium px-6 py-3 rounded-lg transition-colors duration-200 text-sm"
-                style={{ fontFamily: 'var(--font-body)' }}
-              >
-                View Instruments
+                Contact Diagnostics Lab
               </Link>
             </div>
           </ScrollReveal>

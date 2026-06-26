@@ -28,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'AIMS-PAGE — Advanced Institute of Molecular Sciences',
   description:
-    'AIMS-PAGE (Pharma-Agri & Environmental) is a multidisciplinary research and testing laboratory. Your Partner in Growth! — advancing food safety, pharmaceutical integrity, and environmental health.',
+    'AIMS-PAGE (Pharma-Agri & Environmental) is a multidisciplinary research and testing laboratory. For Quality Life — advancing food safety, pharmaceutical integrity, and environmental health.',
   keywords: [
     'molecular sciences', 'pharmaceutical testing', 'agri-biotechnology',
     'environmental testing', 'bioinformatics', 'cell culture', 'CRISPR',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AIMS-PAGE — Advanced Institute of Molecular Sciences',
     description:
-      'Your Partner in Growth! Multidisciplinary research and testing across Pharma, Agri & Environmental domains.',
+      'For Quality Life. Multidisciplinary research and testing across Pharma, Agri & Environmental domains.',
     type: 'website',
   },
 };

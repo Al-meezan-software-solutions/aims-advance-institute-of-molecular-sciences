@@ -1,20 +1,20 @@
 // ─── Brand / theme colours ───────────────────────────────────────────────────
 export const UNITS_ACCENT = {
-  1: { color: "#5E8C3A", label: "Agri-Biotechnology Testing",            tint: "#5E8C3A1F" },
-  2: { color: "#2F6FB0", label: "Bio-Pharma Testing",                    tint: "#2F6FB01F" },
-  3: { color: "#9C7349", label: "Environmental & Toxicology Testing",    tint: "#9C73491F" },
-  4: { color: "#C24E72", label: "Cell Culture & Genetic Engineering",    tint: "#C24E721F" },
-  5: { color: "#6750A4", label: "Bioinformatics",                        tint: "#6750A41F" },
-  6: { color: "#A855F7", label: "Nano Formulation & Characterisation",  tint: "#A855F71F" },
-  7: { color: "#0D9488", label: "Clinical Diagnostics",                  tint: "#0D94881F" },
+  1: { color: "#5E8C3A", label: "Agri-Biotechnology Testing", tint: "#5E8C3A1F" },
+  2: { color: "#2F6FB0", label: "Bio-Pharma Testing", tint: "#2F6FB01F" },
+  3: { color: "#9C7349", label: "Environmental & Toxicology Testing", tint: "#9C73491F" },
+  4: { color: "#C24E72", label: "Cell Culture & Genetic Engineering", tint: "#C24E721F" },
+  5: { color: "#6750A4", label: "Bioinformatics", tint: "#6750A41F" },
+  6: { color: "#A855F7", label: "Nano Formulation & Characterisation", tint: "#A855F71F" },
+  7: { color: "#0D9488", label: "Clinical Diagnostics", tint: "#0D94881F" },
 } as const;
 
 // ─── Stat bar ────────────────────────────────────────────────────────────────
 export const STATS = [
-  { value: "7",  label: "Research Units"        },
-  { value: "45+",label: "Core Service Areas"    },
-  { value: "30+",label: "Molecular Techniques"  },
-  { value: "6",  label: "Research Disciplines"  },
+  { value: "7", label: "Research Units" },
+  { value: "45+", label: "Core Service Areas" },
+  { value: "30+", label: "Molecular Techniques" },
+  { value: "6", label: "Research Disciplines" },
 ];
 
 // ─── Core values ─────────────────────────────────────────────────────────────
@@ -70,6 +70,11 @@ export const SERVICES = [
       "Seed health and viability testing",
       "Fertiliser and bio-stimulant efficacy assays",
       "Mycotoxin screening in grain and feed commodities",
+      "CRISPER gene editing",
+      "DNA fingerprinting",
+      "Bioactive compound identification",
+      "Nutritional profiling of crops",
+      "Herbal formulation development"
     ],
   },
   {
@@ -78,12 +83,18 @@ export const SERVICES = [
     unitId: 2 as const,
     bullets: [
       "API identification and purity testing (HPLC, NMR)",
+      "HPLC/FPLC/UV-Vis based analysis",
       "Dissolution and release profiling",
       "Sterility and bioburden testing",
       "Endotoxin / LAL assays",
       "Stability studies (ICH guidelines)",
       "Biological activity / potency assays",
       "Raw material and finished-product QC",
+      "Bioavailability and pharmacokinetic studies",
+      "In vitro and in vivo drug efficacy testing",
+      "Vaccine and biologics research support",
+      "Cosmetics and nutraceutical drug development"
+
     ],
   },
   {
@@ -91,13 +102,18 @@ export const SERVICES = [
     domain: "Environmental & Toxicology Testing",
     unitId: 3 as const,
     bullets: [
-      "Water quality analysis (heavy metals, pesticides, pathogens)",
-      "Air particulate and VOC monitoring",
-      "Soil contamination profiling",
-      "Eco-toxicology and bioassays",
-      "Persistent organic pollutant (POP) screening",
-      "Effluent characterisation for regulatory compliance",
-      "Sediment and biotic index analysis",
+      "Soil quality analysis (pH, electrical conductivity, total organic carbon)",
+      "Water quality assessment (pH, conductivity, TSS, TDS, COD, BOD, minerals)",
+      "Heavy metal analysis in soil, water, and environmental samples",
+      "Air quality monitoring (particulate matter, carbon monoxide, nitrate, ozone)",
+      "Microplastic detection and characterization",
+      "Organic pollutant screening (PAHs, PCBs, HCHs)",
+      "Persistent organic pollutant (POP) identification and monitoring",
+      "Sediment and environmental matrix analysis",
+      "Eco-toxicology and environmental bioassays",
+      "Environmental contamination profiling and risk assessment",
+      "Effluent characterization for regulatory compliance",
+      "Analytical testing and environmental monitoring for research, industry, and regulatory applications",
     ],
   },
   {
@@ -105,13 +121,20 @@ export const SERVICES = [
     domain: "Cell Culture & Genetic Engineering",
     unitId: 4 as const,
     bullets: [
-      "Mammalian and plant cell-line establishment",
+      "Mammalian cell-line establishment",
       "Recombinant protein expression and purification",
       "CRISPR/Cas9 genome editing services",
       "Transfection and viral vector production",
       "Cell viability, proliferation, and cytotoxicity assays",
       "Flow cytometry and immunophenotyping",
-      "Organoid and 3-D culture models",
+      "DNA/RNA extraction and purification ",
+      "Gene cloning and recombinant DNA technology",
+      "Protein expression analysis (Western blot analysis)",
+      "Stem cells",
+      "Exosomes",
+      "Target-specific cell antigen (downstream processing)",
+      "Sanger sequencing, DNA barcoding, mutation profiling, SNPs, AFLP",
+      "Gene expression analysis (Conventional PCR, qPCR)"
     ],
   },
   {
@@ -121,10 +144,14 @@ export const SERVICES = [
     bullets: [
       "Particle size distribution & zeta potential (DLS)",
       "Nanoparticle Tracking Analysis (NTA) for liposomes & EVs",
-      "Morphological characterisation of nano-carriers",
+      "Nanoparticle Size & Morphology Analysis (TEM/SEM)",
       "Drug loading and encapsulation efficiency determination",
       "In vitro release profiling of nano-formulations",
       "Accelerated stability testing of colloidal dispersions",
+      "Functional Group Characterisation (FTIR Spectroscopy)",
+      "Crystallinity & Structural Analysis (XRD)",
+      "Spectroscopic Characterisation of Drug–Carrier Interaction (UV–Vis/FTIR)",
+      "DSC/TGA"
     ],
   },
   {
@@ -135,10 +162,15 @@ export const SERVICES = [
       "Whole-genome and targeted sequencing data analysis",
       "Transcriptomics (RNA-seq differential expression)",
       "Metagenomic community profiling",
-      "Phylogenetic and comparative genomics",
+      "Virtual Screening (Identification of Lead Compounds)",
       "Variant annotation and functional prediction",
-      "Custom pipeline development (Snakemake / Nextflow)",
       "Data visualisation and scientific reporting",
+      "Molecular docking (Peptide/Phytocompounds)",
+      "Network pharmacology",
+      "MD simulation",
+      "Insilico Vaccine Desgining",
+      "DFT (Density Funcational Theory)",
+      "Machine learning–based biomarker discovery,  disease prediction and drug desgining",
     ],
   },
   {
@@ -177,7 +209,7 @@ export const RESEARCH_UNITS = [
     id: 2 as const,
     name: "Bio-Pharma Testing Unit",
     shortName: "Bio-Pharma",
-    narrative: `The Bio-Pharma Testing Unit provides contract analytical and quality-control services to pharmaceutical manufacturers, biotech developers, and research hospitals across the region. Operating under a quality-management system aligned with ICH and WHO guidelines, the unit covers every phase of the product lifecycle — from raw-material qualification through finished-product release and long-term stability archiving. Our instrumentation suite supports the full spectrum of chemical, physical, and biological characterisation demanded by regulatory dossiers. The unit has particular depth in dissolution testing, where its compendial and bio-relevant media capabilities support both generic and innovator formulation development. Biological testing capabilities — sterility, mycoplasma, endotoxin — are conducted in dedicated controlled environments to ISO Class 5 or better.`,
+    narrative: `Biopharmaceutical Research and Development Unit provides integrated services in drug discovery, formulation, development, and analytical characterization of pharmaceutical, biopharmaceutical, herbal, cosmetic, and nutraceutical products. The unit specializes in formulation optimization, stability testing, quality evaluation, and bioanalytical method development using advanced platforms such as HPLC, FPLC, UV–Visible Spectrophotometry, FTIR, and DSC. It also conducts in vitro and in vivo pharmacological studies, protein purification, biomolecule characterization, and research in biologics, vaccines, and targeted drug delivery. By supporting preclinical evaluation and regulatory compliance, the unit advances the development of safe, effective, and high-quality healthcare products.`,
     capabilities: [
       "HPLC / UHPLC-UV and fluorescence for assay and purity",
       "LC-MS/MS for trace impurity profiling and metabolite identification",
@@ -235,7 +267,7 @@ export const RESEARCH_UNITS = [
     id: 5 as const,
     name: "Bioinformatics Unit",
     shortName: "Bioinformatics",
-    narrative: `The Bioinformatics Unit provides the computational backbone for AIMS-PAGE's sequencing-intensive research programmes and offers standalone data-analysis services to external clients generating high-throughput omics data. The unit's infrastructure — a private HPC cluster with 48 compute cores and 4 TB storage, plus cloud burst capacity — enables rapid turnaround on whole-genome, amplicon, and RNA-seq datasets. Analysts are expert in both short-read (Illumina) and long-read (Oxford Nanopore) data, applying best-practice workflows for quality control, assembly, annotation, and downstream statistical interpretation. The unit develops bespoke pipelines using Snakemake and Nextflow frameworks and maintains rigorous version control and documentation standards so that analyses are fully reproducible and audit-ready.`,
+    narrative: `The Bioinformatics Unit provides the computational backbone for AIMS-PAGE's sequencing-intensive research programmes and offers standalone data-analysis services to external clients generating high-throughput omics data. AIMS-PAGE provides advanced in silico drug design and computational biology services to support modern pharmaceutical and biomedical research. The unit specializes in DNA/RNA sequence analysis, protein structure prediction, molecular docking, virtual screening, and ADMET profiling for drug discovery applications. Using Python/R-based bioinformatics tools, automation pipelines, and machine learning approaches, the facility enables biomarker discovery, disease prediction, and biological network analysis. Our services are designed to accelerate rational drug design, reduce experimental cost, and support innovative, data-driven therapeutic development`,
     capabilities: [
       "Short-read (Illumina) WGS: assembly, annotation, SNP/indel calling",
       "Long-read (ONT) assembly and structural variant detection",
@@ -265,48 +297,53 @@ export const RESEARCH_UNITS = [
 export const TRAINING_COURSES = [
   {
     code: "TC-01",
-    title: "PCR & qPCR: Principles and Practice",
-    description: "Hands-on mastery of conventional and quantitative PCR, primer design, and data interpretation.",
+    title: "Biochemistry & Clinical Laboratory Techniques",
+    description: "Essential methodologies for clinical biochemistry, spectrophotometric analysis, enzymology, and diagnostic biomarker assays.",
   },
   {
     code: "TC-02",
-    title: "CRISPR-Cas9 Genome Editing",
-    description: "End-to-end workshop: guide RNA design, delivery methods, efficiency screening, and off-target analysis.",
+    title: "Molecular Biology & PCR-Based Diagnostics",
+    description: "Hands-on instruction in nucleic acid amplification, conventional and real-time qPCR validation, and clinical diagnostics screening.",
   },
   {
     code: "TC-03",
-    title: "Next-Generation Sequencing Data Analysis",
-    description: "Practical bioinformatics for Illumina and ONT datasets, from FASTQ to annotated variants.",
+    title: "Cell Culture & Flow Cytometry Applications",
+    description: "Sterile culture workflows, media preparation, cellular transfection, immunophenotyping, and high-throughput flow cytometric analysis.",
   },
   {
     code: "TC-04",
-    title: "Pharmaceutical Quality Control & GMP",
-    description: "Regulatory-aligned training on QC testing, documentation, and GMP compliance for pharma laboratories.",
+    title: "Genomics & DNA Sequencing Analysis",
+    description: "From library prep to alignment: instruction in Sanger sequencing, DNA barcoding, metagenomics, and next-generation sequencing analysis.",
   },
   {
     code: "TC-05",
-    title: "Environmental Sampling & Analysis",
-    description: "Field sampling protocols, chain-of-custody, and analytical methods for water, soil, and air matrices.",
+    title: "Bioinformatics",
+    description: "Sequence analysis, biological database mining, homology modeling, network pharmacology, molecular docking, and phylogenetic trees.",
   },
   {
     code: "TC-06",
-    title: "Cell Culture Fundamentals",
-    description: "Sterile technique, media preparation, cell passaging, cryopreservation, and contamination management.",
+    title: "Protein Purification & Chromatography Techniques",
+    description: "Practical FPLC and HPLC operation, size-exclusion, ion-exchange, affinity chromatography, and downstream protein validation.",
   },
   {
     code: "TC-07",
-    title: "Food & Feed Safety Testing",
-    description: "Mycotoxin, pesticide residue, and GMO detection methods with regulatory context for export markets.",
+    title: "Nanotechnology & Drug Delivery Systems",
+    description: "Synthesis and characterization of nano-formulations, lipid nanoparticles, particle-size profiling, and in vitro release analysis.",
   },
   {
     code: "TC-08",
-    title: "Bioinformatics Pipeline Development",
-    description: "Workflow automation using Snakemake/Nextflow, version control, and reproducible research practices.",
+    title: "Gene Cloning & Genetic Engineering",
+    description: "Restriction digestion, vector design, ligation, plasmid extraction, bacterial transformation, and recombinant selection validation.",
   },
   {
     code: "TC-09",
-    title: "Laboratory Management & Quality Systems",
-    description: "ISO 17025 implementation, internal auditing, proficiency testing, and uncertainty of measurement.",
+    title: "Machine Learning in Life Sciences",
+    description: "Application of predictive modeling, biomarker discovery, and deep learning algorithms to genomic, chemical, and drug design datasets.",
+  },
+  {
+    code: "TC-10",
+    title: "Biosafety & Laboratory Safety Guidelines",
+    description: "Comprehensive training on BSL-2/BSL-3 protocols, chemical hygiene, waste disposal, personal protective equipment (PPE), and emergency response.",
   },
 ];
 

@@ -10,22 +10,23 @@ const HOME_ITEMS = [
   { href: '/mission#vision-card', label: 'Vision', color: '#80B93C' },
   { href: '/mission#mission-card', label: 'Mission', color: '#2BB7C4' },
   { href: '/values', label: 'Values', color: '#5E8C3A' },
+  { href: '/registrations-certifications', label: 'Registrations & Certifications', color: '#2BB7C4' },
 ];
 
 const RESEARCH_SERVICES_ITEMS = [
-  { href: '/services#agri-biotechnology', label: 'Agri-Biotechnology', color: '#5E8C3A' },
-  { href: '/services#bio-pharmaceutical', label: 'Bio-Pharmaceutical', color: '#2F6FB0' },
-  { href: '/services#environmental-science', label: 'Environmental Science', color: '#9C7349' },
-  { href: '/services#cell-culture-genetics', label: 'Cell Culture & Genetic Engineering', color: '#C24E72' },
-  { href: '/services#nano-formulation', label: 'Nano Formulation & Characterisation', color: '#A855F7' },
-  { href: '/services#bioinformatics', label: 'Bioinformatics', color: '#6750A4' },
-  { href: '/services#clinical-diagnosis', label: 'Clinical Diagnostics', color: '#0D9488' },
+  { href: '/services/agri-biotechnology', label: 'Agri-Biotechnology', color: '#5E8C3A' },
+  { href: '/services/bio-pharmaceutical', label: 'Bio-Pharmaceutical', color: '#2F6FB0' },
+  { href: '/services/environmental-science', label: 'Environmental Science', color: '#9C7349' },
+  { href: '/services/cell-culture-genetics', label: 'Cell Culture & Genetic Engineering', color: '#C24E72' },
+  { href: '/services/nano-formulation', label: 'Nano Formulation & Characterisation', color: '#A855F7' },
+  { href: '/services/bioinformatics', label: 'Bioinformatics', color: '#6750A4' },
+  // { href: '/services/clinical-diagnosis', label: 'Clinical Diagnostics', color: '#0D9488' },
   { href: '/training', label: 'Training Services', color: '#80B93C' },
 ];
 
 const CLINICAL_DIAGNOSTICS_ITEMS = [
-  { href: '/clinical-diagnostics#human', label: 'Human Diagnostics', color: '#0D9488' },
-  { href: '/clinical-diagnostics#veterinary', label: 'Veterinary Diagnostics', color: '#5E8C3A' },
+  { href: '/clinical-diagnostics/human', label: 'Human Diagnostics', color: '#0D9488' },
+  { href: '/clinical-diagnostics/veterinary', label: 'Veterinary Diagnostics', color: '#5E8C3A' },
 ];
 
 const TOOLS_TECHNIQUES_ITEMS = [
@@ -102,11 +103,10 @@ export default function Nav() {
         id="main-nav"
         role="navigation"
         aria-label="Main navigation"
-        className={`sticky top-0 z-40 transition-all duration-300 border-b ${
-          scrolled
-            ? 'bg-white/96 border-gray-200 shadow-sm'
-            : 'bg-white/96 border-gray-100'
-        }`}
+        className={`sticky top-0 z-40 transition-all duration-300 border-b ${scrolled
+          ? 'bg-white/96 border-gray-200 shadow-sm'
+          : 'bg-white/96 border-gray-100'
+          }`}
       >
         <Link
           href="/"
@@ -134,7 +134,7 @@ export default function Nav() {
                 className="text-[#6B7A8D] hidden sm:block"
                 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', letterSpacing: '0.08em', marginTop: '4px' }}
               >
-                YOUR PARTNER IN GROWTH
+                FOR QUALITY LIFE
               </div>
             </div>
           </Link>
@@ -157,11 +157,10 @@ export default function Nav() {
                     <div className="flex items-center">
                       <Link
                         href={link.href}
-                        className={`text-[0.76rem] font-medium pl-2.5 pr-1 py-1.5 rounded-md flex items-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${
-                          isActive
-                            ? 'text-[#0B3450] font-semibold'
-                            : 'text-[#2D3748] hover:text-[#0B3450]'
-                        }`}
+                        className={`text-[0.76rem] font-medium pl-2.5 pr-1 py-1.5 rounded-md flex items-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${isActive
+                          ? 'text-[#0B3450] font-semibold'
+                          : 'text-[#2D3748] hover:text-[#0B3450]'
+                          }`}
                         style={{ fontFamily: 'var(--font-body)' }}
                       >
                         {link.label}
@@ -186,11 +185,10 @@ export default function Nav() {
                   ) : (
                     <Link
                       href={link.href || '#'}
-                      className={`text-[0.76rem] font-medium px-2.5 py-1.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${
-                        pathname === link.href
-                          ? 'text-[#0B3450] bg-[#F6FAFB] font-semibold'
-                          : 'text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50'
-                      }`}
+                      className={`text-[0.76rem] font-medium px-2.5 py-1.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${pathname === link.href
+                        ? 'text-[#0B3450] bg-[#F6FAFB] font-semibold'
+                        : 'text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50'
+                        }`}
                       style={{ fontFamily: 'var(--font-body)' }}
                       aria-current={pathname === link.href ? 'page' : undefined}
                     >
@@ -201,13 +199,11 @@ export default function Nav() {
                   {/* Dropdown Menu */}
                   {hasDropdown && link.dropdown && (
                     <div
-                      className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ${
-                        link.label === 'Research Services' || link.label === 'Clinical Diagnostic Services' ? 'w-76' : 'w-52'
-                      } ${
-                        isHovered
+                      className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ${link.label === 'Research Services' || link.label === 'Clinical Diagnostic Services' ? 'w-76' : 'w-52'
+                        } ${isHovered
                           ? 'opacity-100 translate-y-0 pointer-events-auto'
                           : 'opacity-0 -translate-y-2 pointer-events-none'
-                      }`}
+                        }`}
                     >
                       <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2.5 z-50">
                         <ul className="space-y-0.5" role="menu">
@@ -291,12 +287,11 @@ export default function Nav() {
                             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                           </svg>
                         </button>
-                        
+
                         {/* Mobile accordion dropdown items */}
                         <div
-                          className={`mt-1 pl-4 space-y-1 transition-all duration-300 overflow-hidden ${
-                            isExpanded ? 'max-h-[500px] opacity-100 py-1.5' : 'max-h-0 opacity-0 pointer-events-none'
-                          }`}
+                          className={`mt-1 pl-4 space-y-1 transition-all duration-300 overflow-hidden ${isExpanded ? 'max-h-[500px] opacity-100 py-1.5' : 'max-h-0 opacity-0 pointer-events-none'
+                            }`}
                         >
                           {link.dropdown?.map(item => (
                             <Link
@@ -316,11 +311,10 @@ export default function Nav() {
                     ) : (
                       <Link
                         href={link.href || '#'}
-                        className={`block font-medium text-sm px-3 py-2.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${
-                          isActive
-                            ? 'text-[#0B3450] bg-[#F6FAFB] font-semibold'
-                            : 'text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50'
-                        }`}
+                        className={`block font-medium text-sm px-3 py-2.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${isActive
+                          ? 'text-[#0B3450] bg-[#F6FAFB] font-semibold'
+                          : 'text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50'
+                          }`}
                         aria-current={isActive ? 'page' : undefined}
                       >
                         {link.label}
@@ -335,7 +329,7 @@ export default function Nav() {
                 href="/contact"
                 className="block text-center bg-[#0B3450] hover:bg-[#164e78] text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors duration-200"
               >
-                Get in Touch
+                Contact Us
               </Link>
             </div>
           </div>

@@ -9,6 +9,7 @@ const FOOTER_LINKS = [
   { href: '/research-units', label: 'Research Units' },
   { href: '/training',       label: 'Training'       },
   { href: '/instruments',    label: 'Instruments'    },
+  { href: '/registrations-certifications', label: 'Registrations & Certifications' },
   { href: '/contact',        label: 'Contact'        },
 ];
 
@@ -42,7 +43,7 @@ export default function Footer() {
                   AIMS<span className="text-[#2BB7C4]">-PAGE</span>
                 </div>
                 <div className="text-slate-500" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', letterSpacing: '0.12em' }}>
-                  YOUR PARTNER IN GROWTH
+                  FOR QUALITY LIFE
                 </div>
               </div>
             </Link>
@@ -56,7 +57,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 bg-[#2BB7C4] hover:bg-[#1e9aa6] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white"
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              Get in Touch
+              Contact Us
               <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                 <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z"/>
               </svg>
