@@ -61,10 +61,6 @@ const NAV_LINKS = [
     label: 'Projects & Publications',
     href: '/publications',
   },
-  {
-    label: 'Contact Us',
-    href: '/contact',
-  },
 ];
 
 export default function Nav() {
@@ -93,18 +89,11 @@ export default function Nav() {
   return (
     <>
       {/* ── Top utility bar ───────────────────────────────────── */}
-      <div className="bg-[#F8FAFC] border-b border-slate-200/60 text-slate-600 text-xs py-1.5 hidden lg:block">
-        <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
-          <span style={{ fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>
+      <div className="bg-[#F8FAFC] border-b border-slate-200/60 text-slate-600 text-xs py-2 hidden lg:block">
+        <div className="max-w-7xl mx-auto px-8 text-center">
+          <span className="font-bold" style={{ fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>
             Advanced Institute of Molecular Sciences — Pharma · Agri · Environmental
           </span>
-          <Link
-            href="/contact"
-            className="text-[#2BB7C4] hover:text-[#0B3450] transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
-            style={{ fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}
-          >
-            Contact Us →
-          </Link>
         </div>
       </div>
 
@@ -254,7 +243,7 @@ export default function Nav() {
               className="hidden lg:inline-flex items-center gap-2 bg-[#0B3450] hover:bg-[#164e78] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              Get in Touch
+              Contact Us
             </Link>
             <button
               className="lg:hidden text-[#0B3450] p-2 rounded-md hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
