@@ -7,7 +7,7 @@ interface AimsLogoProps {
 }
 
 export default function AimsLogo({
-  size = 40,
+  size = 80,
   className = '',
 }: AimsLogoProps) {
   return (

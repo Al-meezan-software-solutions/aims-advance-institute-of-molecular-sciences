@@ -126,24 +126,24 @@ export default function Nav() {
           Skip to main content
         </Link>
 
-        <div className="max-w-[90rem] mx-auto px-4 lg:px-6 flex items-center justify-between h-16">
+        <div className="max-w-[90rem] mx-auto px-4 lg:px-6 flex items-center justify-between h-24">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 shrink-0 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
+            className="flex items-center gap-3 shrink-0 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
             aria-label="AIMS-PAGE home"
           >
-            <AimsLogo size={36} variant="light" />
+            <AimsLogo size={76} variant="light" />
             <div className="leading-none">
               <div
                 className="font-bold text-[#0B3450] tracking-tight"
-                style={{ fontFamily: 'var(--font-display)', fontSize: '0.98rem' }}
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.65rem' }}
               >
                 AIMS<span className="text-[#2BB7C4]">-PAGE</span>
               </div>
               <div
                 className="text-[#6B7A8D] hidden sm:block"
-                style={{ fontFamily: 'var(--font-mono)', fontSize: '0.55rem', letterSpacing: '0.08em', marginTop: '2px' }}
+                style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', letterSpacing: '0.08em', marginTop: '4px' }}
               >
                 YOUR PARTNER IN GROWTH
               </div>
