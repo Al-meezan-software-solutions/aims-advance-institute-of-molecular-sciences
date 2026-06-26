@@ -5,14 +5,16 @@ export const UNITS_ACCENT = {
   3: { color: "#9C7349", label: "Environmental & Toxicology Testing",    tint: "#9C73491F" },
   4: { color: "#C24E72", label: "Cell Culture & Genetic Engineering",    tint: "#C24E721F" },
   5: { color: "#6750A4", label: "Bioinformatics",                        tint: "#6750A41F" },
+  6: { color: "#A855F7", label: "Nano Formulation & Characterisation",  tint: "#A855F71F" },
+  7: { color: "#0D9488", label: "Clinical Diagnostics",                  tint: "#0D94881F" },
 } as const;
 
 // ─── Stat bar ────────────────────────────────────────────────────────────────
 export const STATS = [
-  { value: "5",  label: "Research Units"        },
-  { value: "30+",label: "Core Service Areas"    },
-  { value: "20+",label: "Molecular Techniques"  },
-  { value: "4",  label: "Research Disciplines"  },
+  { value: "7",  label: "Research Units"        },
+  { value: "45+",label: "Core Service Areas"    },
+  { value: "30+",label: "Molecular Techniques"  },
+  { value: "6",  label: "Research Disciplines"  },
 ];
 
 // ─── Core values ─────────────────────────────────────────────────────────────
@@ -57,6 +59,7 @@ export const CORE_VALUES = [
 // ─── Scope of services ───────────────────────────────────────────────────────
 export const SERVICES = [
   {
+    id: "agri-biotechnology",
     domain: "Agri-Biotechnology Testing",
     unitId: 1 as const,
     bullets: [
@@ -70,6 +73,7 @@ export const SERVICES = [
     ],
   },
   {
+    id: "bio-pharmaceutical",
     domain: "Bio-Pharma Testing",
     unitId: 2 as const,
     bullets: [
@@ -83,6 +87,7 @@ export const SERVICES = [
     ],
   },
   {
+    id: "environmental-science",
     domain: "Environmental & Toxicology Testing",
     unitId: 3 as const,
     bullets: [
@@ -96,6 +101,7 @@ export const SERVICES = [
     ],
   },
   {
+    id: "cell-culture-genetics",
     domain: "Cell Culture & Genetic Engineering",
     unitId: 4 as const,
     bullets: [
@@ -109,6 +115,20 @@ export const SERVICES = [
     ],
   },
   {
+    id: "nano-formulation",
+    domain: "Nano Formulation & Characterisation",
+    unitId: 6 as const,
+    bullets: [
+      "Particle size distribution & zeta potential (DLS)",
+      "Nanoparticle Tracking Analysis (NTA) for liposomes & EVs",
+      "Morphological characterisation of nano-carriers",
+      "Drug loading and encapsulation efficiency determination",
+      "In vitro release profiling of nano-formulations",
+      "Accelerated stability testing of colloidal dispersions",
+    ],
+  },
+  {
+    id: "bioinformatics",
     domain: "Bioinformatics",
     unitId: 5 as const,
     bullets: [
@@ -119,6 +139,19 @@ export const SERVICES = [
       "Variant annotation and functional prediction",
       "Custom pipeline development (Snakemake / Nextflow)",
       "Data visualisation and scientific reporting",
+    ],
+  },
+  {
+    id: "clinical-diagnosis",
+    domain: "Clinical Diagnostics",
+    unitId: 7 as const,
+    bullets: [
+      "Molecular pathogen detection (viral, bacterial, fungal)",
+      "Genetic predisposition screening assays",
+      "Polymerase chain reaction (PCR & qPCR) diagnostics",
+      "Biomarker identification and quantification",
+      "Serological & ELISA immunological profiling",
+      "Quality control and validation of custom molecular assays",
     ],
   },
 ];
@@ -186,6 +219,19 @@ export const RESEARCH_UNITS = [
     ],
   },
   {
+    id: 6 as const,
+    name: "Nano Formulation & Characterisation Unit",
+    shortName: "Nano Form.",
+    narrative: `The Nano Formulation & Characterisation Unit addresses the frontiers of drug delivery and nanotechnology, helping partners formulate, optimize, and characterize nanostructured materials. From lipid nanoparticles (LNPs) and liposomes to polymeric nanoparticles and nano-emulsions, we provide robust analytical workflows to assess stability, morphology, and release kinetics. The unit specializes in Dynamic Light Scattering (DLS) and Nanoparticle Tracking Analysis (NTA) for direct size distribution and zeta potential measurements. In addition, we design custom encapsulation studies to optimize the loading and release profiles of sensitive biomolecules, ensuring their therapeutic efficiency.`,
+    capabilities: [
+      "Particle size distribution and zeta potential analysis (DLS)",
+      "Nanoparticle Tracking Analysis (NTA) for colloidal suspensions",
+      "Encapsulation efficiency and drug loading profiling of nano-carriers",
+      "In vitro release profiling and membrane diffusion studies",
+      "Stability studies for colloidal and nano-suspensions (ICH-aligned)",
+    ],
+  },
+  {
     id: 5 as const,
     name: "Bioinformatics Unit",
     shortName: "Bioinformatics",
@@ -198,6 +244,19 @@ export const RESEARCH_UNITS = [
       "Pathway and gene-ontology enrichment (GSEA, clusterProfiler)",
       "Molecular phylogenetics: IQ-TREE, BEAST, RAxML",
       "Custom Snakemake / Nextflow pipeline development and containerisation",
+    ],
+  },
+  {
+    id: 7 as const,
+    name: "Clinical Diagnostics Unit",
+    shortName: "Diagnostics",
+    narrative: `The Clinical Diagnostics Unit offers state-of-the-art molecular diagnostic testing services, focusing on high-accuracy pathogen identification, genetic screening, and biomarker profiling. Utilizing advanced real-time PCR, DNA sequencing, and multiplex immunological profiling, the unit delivers trace-level detection of viral, bacterial, and fungal agents. Working under strict quality standards, we support clinical trials, epidemiological studies, and specialized screening applications, providing the molecular precision needed for early detection and therapeutic monitoring.`,
+    capabilities: [
+      "Multiplex real-time PCR for rapid pathogen detection panels",
+      "Genetic predisposition testing and mutation profiling (Sanger / NGS)",
+      "Serological profiling and biomarker quantification (ELISA / multiplex)",
+      "Molecular assay design, validation, and optimization",
+      "High-throughput screening platforms with certified quality assurance",
     ],
   },
 ];

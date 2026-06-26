@@ -21,6 +21,8 @@
   --color-unit3:       #9C7349;
   --color-unit4:       #C24E72;
   --color-unit5:       #6750A4;
+  --color-unit6:       #A855F7;
+  --color-unit7:       #0D9488;
 
   /* ── Typography (CSS vars from next/font) ── */
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;

@@ -185,7 +185,7 @@ export default function Home() {
           </div>
 
           {/* Right: stat cards */}
-          <div className="flex flex-col justify-center py-20 lg:py-28 pl-8 lg:pl-20">
+          <div id="highlights" className="flex flex-col justify-center py-20 lg:py-28 pl-8 lg:pl-20">
             <div className="flex justify-center mb-10" aria-hidden="true">
               <HelixRibbon color="#0B3450" size={200} className="opacity-30" />
             </div>

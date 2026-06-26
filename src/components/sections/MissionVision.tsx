@@ -39,8 +39,9 @@ export default function MissionVision() {
           {/* Mission */}
           <ScrollReveal delay={80}>
             <article
+              id="mission-card"
               aria-labelledby="mission-card-heading"
-              className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-gray-100 h-full relative overflow-hidden card-lift"
+              className="scroll-mt-24 bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-gray-100 h-full relative overflow-hidden card-lift"
             >
               {/* Top colour bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-[#2BB7C4] rounded-t-2xl" aria-hidden="true" />
@@ -87,8 +88,9 @@ export default function MissionVision() {
           {/* Vision */}
           <ScrollReveal delay={160}>
             <article
+              id="vision-card"
               aria-labelledby="vision-card-heading"
-              className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-gray-100 h-full relative overflow-hidden card-lift"
+              className="scroll-mt-24 bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-gray-100 h-full relative overflow-hidden card-lift"
             >
               {/* Top colour bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-[#80B93C] rounded-t-2xl" aria-hidden="true" />

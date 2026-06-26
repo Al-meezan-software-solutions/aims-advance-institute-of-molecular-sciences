@@ -47,9 +47,10 @@ export default function Services() {
             return (
               <ScrollReveal key={svc.domain} delay={i * 65}>
                 <article
+                  id={svc.id}
                   role="listitem"
                   aria-labelledby={`svc-${i}-heading`}
-                  className="bg-white rounded-2xl border border-gray-100 overflow-hidden card-lift group h-full flex flex-col"
+                  className="scroll-mt-20 bg-white rounded-2xl border border-gray-100 overflow-hidden card-lift group h-full flex flex-col"
                 >
                   {/* Card header */}
                   <div
