@@ -26,6 +26,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+  ),
   title: 'AIMS-PAGE — Advanced Institute of Molecular Sciences',
   description:
     'AIMS-PAGE (Pharma-Agri & Environmental) is a multidisciplinary research and testing laboratory. For Quality Life — advancing food safety, pharmaceutical integrity, and environmental health.',
@@ -34,11 +37,29 @@ export const metadata: Metadata = {
     'environmental testing', 'bioinformatics', 'cell culture', 'CRISPR',
     'PCR testing', 'contract laboratory', 'AIMS-PAGE',
   ],
+  icons: {
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo.png', sizes: '1001x1024', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/favicon-32x32.png',
+  },
   openGraph: {
     title: 'AIMS-PAGE — Advanced Institute of Molecular Sciences',
     description:
       'For Quality Life. Multidisciplinary research and testing across Pharma, Agri & Environmental domains.',
     type: 'website',
+    images: [
+      {
+        url: '/logo.png',
+        width: 439,
+        height: 497,
+        alt: 'AIMS-PAGE Logo',
+      },
+    ],
   },
 };
 

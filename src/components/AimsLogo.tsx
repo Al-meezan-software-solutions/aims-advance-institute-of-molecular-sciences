@@ -2,7 +2,6 @@ import Image from 'next/image';
 
 interface AimsLogoProps {
   size?: number;
-  variant?: 'light' | 'dark';
   className?: string;
 }
 
@@ -17,7 +16,8 @@ export default function AimsLogo({
       width={size}
       height={size}
       className={className}
-      style={{ display: 'block', height: 'auto', width: `${size}px` }}
+      style={{ display: 'block', width: `${size}px`, height: 'auto' }}
+      quality={100}
       priority
     />
   );

@@ -36,16 +36,8 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-5 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded" aria-label="AIMS-PAGE home">
-              <AimsLogo size={76} variant="light" />
-              <div>
-                <div className="font-bold text-[#0B3450]" style={{ fontFamily: 'var(--font-display)', fontSize: '1.65rem' }}>
-                  AIMS<span className="text-[#2BB7C4]">-PAGE</span>
-                </div>
-                <div className="text-slate-500" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', letterSpacing: '0.12em' }}>
-                  FOR QUALITY LIFE
-                </div>
-              </div>
+            <Link href="/" className="inline-flex items-center mb-5 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded" aria-label="AIMS-PAGE home">
+              <AimsLogo size={130} />
             </Link>
 
             <p className="text-slate-600 leading-relaxed mb-6" style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem' }}>
