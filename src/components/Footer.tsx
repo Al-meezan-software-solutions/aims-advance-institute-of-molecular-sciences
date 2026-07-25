@@ -39,10 +39,10 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 mb-5 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded" aria-label="AIMS-PAGE home">
               <AimsLogo size={88} />
               <div>
-                <div className="font-bold text-[#0B3450]" style={{ fontFamily: 'var(--font-display)', fontSize: '1.65rem' }}>
+                <div className="font-bold text-[#0B3450]" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem' }}>
                   AIMS<span className="text-[#2BB7C4]">-PAGE</span>
                 </div>
-                <div className="text-slate-500" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', letterSpacing: '0.12em' }}>
+                <div className="text-slate-500" style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', letterSpacing: '0.12em', marginTop: '3px' }}>
                   FOR QUALITY LIFE
                 </div>
               </div>
