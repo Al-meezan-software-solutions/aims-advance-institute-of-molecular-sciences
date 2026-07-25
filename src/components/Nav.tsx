@@ -119,10 +119,24 @@ export default function Nav() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center shrink-0 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
+            className="flex items-center gap-3 shrink-0 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
             aria-label="AIMS-PAGE home"
           >
-            <AimsLogo size={128} />
+            <AimsLogo size={88} />
+            <div className="leading-none">
+              <div
+                className="font-bold text-[#0B3450] tracking-tight"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem' }}
+              >
+                AIMS<span className="text-[#2BB7C4]">-PAGE</span>
+              </div>
+              <div
+                className="text-[#6B7A8D] hidden sm:block"
+                style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', letterSpacing: '0.08em', marginTop: '3px' }}
+              >
+                FOR QUALITY LIFE
+              </div>
+            </div>
           </Link>
 
           {/* Desktop links */}
