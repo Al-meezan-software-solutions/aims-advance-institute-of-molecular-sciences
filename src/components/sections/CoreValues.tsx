@@ -2,7 +2,7 @@ import { CORE_VALUES } from '@/lib/data';
 import ScrollReveal from '@/components/ScrollReveal';
 
 const VALUE_COLORS = [
-  '#2BB7C4', '#0B3450', '#5E8C3A', '#2F6FB0',
+  '#80B93C', '#0B3450', '#5E8C3A', '#2F6FB0',
   '#9C7349', '#C24E72', '#6750A4',
 ];
 
@@ -29,8 +29,8 @@ export default function CoreValues() {
         <ScrollReveal>
           <div className="max-w-2xl mb-14">
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Core Values</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Core Values</span>
             </div>
             <h2
               id="values-heading"

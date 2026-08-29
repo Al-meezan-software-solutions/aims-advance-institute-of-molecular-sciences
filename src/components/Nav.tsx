@@ -32,7 +32,7 @@ const CLINICAL_DIAGNOSTICS_ITEMS = [
 ];
 
 const TOOLS_TECHNIQUES_ITEMS = [
-  { href: '/tools-techniques#images', label: 'Test with images', color: '#2BB7C4' },
+  { href: '/tools-techniques#images', label: 'Test with images', color: '#80B93C' },
 ];
 
 const NAV_LINKS = [
@@ -136,7 +136,7 @@ export default function Nav() {
                 AIMS<span className="text-[#2BB7C4]">-PAGE</span>
               </div>
               <div
-                className="text-[#6B7A8D] hidden sm:block"
+                className="text-[#80B93C] hidden sm:block font-semibold"
                 style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', letterSpacing: '0.08em', marginTop: '3px' }}
               >
                 FOR QUALITY LIFE
@@ -162,11 +162,11 @@ export default function Nav() {
                     <div className="flex items-center">
                       <Link
                         href={link.href}
-                        className={`text-[0.76rem] font-medium pl-2.5 pr-1 py-1.5 rounded-md flex items-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${isActive
-                          ? 'text-[#0B3450] font-semibold'
+                        className={`text-[0.8rem] font-bold pl-2.5 pr-1 py-1.5 rounded-md flex items-center transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${isActive
+                          ? 'text-[#0B3450]'
                           : 'text-[#2D3748] hover:text-[#0B3450]'
                           }`}
-                        style={{ fontFamily: 'var(--font-body)' }}
+                        style={{ fontFamily: 'var(--font-body)', fontWeight: 700 }}
                       >
                         {link.label}
                       </Link>
@@ -190,11 +190,11 @@ export default function Nav() {
                   ) : (
                     <Link
                       href={link.href || '#'}
-                      className={`text-[0.76rem] font-medium px-2.5 py-1.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${pathname === link.href
-                        ? 'text-[#0B3450] bg-[#F6FAFB] font-semibold'
+                      className={`text-[0.8rem] font-bold px-2.5 py-1.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${pathname === link.href
+                        ? 'text-[#0B3450] bg-[#F6FAFB]'
                         : 'text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50'
                         }`}
-                      style={{ fontFamily: 'var(--font-body)' }}
+                      style={{ fontFamily: 'var(--font-body)', fontWeight: 700 }}
                       aria-current={pathname === link.href ? 'page' : undefined}
                     >
                       {link.label}
@@ -241,7 +241,7 @@ export default function Nav() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-flex items-center gap-2 bg-[#0B3450] hover:bg-[#164e78] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
+              className="hidden lg:inline-flex items-center gap-2 bg-[#0B3450] hover:bg-[#164e78] text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Contact Us
@@ -279,7 +279,7 @@ export default function Nav() {
                       <div>
                         <button
                           onClick={() => toggleMobileDropdown(link.label)}
-                          className="flex items-center justify-between w-full font-medium text-sm px-3 py-2.5 rounded-md text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50 text-left transition-colors cursor-pointer"
+                          className="flex items-center justify-between w-full font-bold text-sm px-3 py-2.5 rounded-md text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50 text-left transition-colors cursor-pointer"
                         >
                           <span>{link.label}</span>
                           <svg
@@ -316,8 +316,8 @@ export default function Nav() {
                     ) : (
                       <Link
                         href={link.href || '#'}
-                        className={`block font-medium text-sm px-3 py-2.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${isActive
-                          ? 'text-[#0B3450] bg-[#F6FAFB] font-semibold'
+                        className={`block font-bold text-sm px-3 py-2.5 rounded-md transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] ${isActive
+                          ? 'text-[#0B3450] bg-[#F6FAFB]'
                           : 'text-[#2D3748] hover:text-[#0B3450] hover:bg-gray-50'
                           }`}
                         aria-current={isActive ? 'page' : undefined}
@@ -332,7 +332,7 @@ export default function Nav() {
             <div className="mt-4 pt-4 border-t border-gray-100">
               <Link
                 href="/contact"
-                className="block text-center bg-[#0B3450] hover:bg-[#164e78] text-white font-semibold text-sm px-5 py-3 rounded-lg transition-colors duration-200"
+                className="block text-center bg-[#0B3450] hover:bg-[#164e78] text-white font-bold text-sm px-5 py-3 rounded-lg transition-colors duration-200"
               >
                 Contact Us
               </Link>

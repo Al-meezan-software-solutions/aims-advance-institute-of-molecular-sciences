@@ -88,9 +88,9 @@ export default function PublicationsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Scientific Contributions</span>
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Scientific Contributions</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
             </div>
             <h1
               id="publications-heading"
@@ -114,8 +114,8 @@ export default function PublicationsPage() {
           <ScrollReveal>
             <div className="max-w-2xl mb-14">
               <div className="inline-flex items-center gap-2 mb-4">
-                <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-                <span className="eyebrow text-[#2BB7C4]">Ongoing Research</span>
+                <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+                <span className="eyebrow text-[#80B93C]">Ongoing Research</span>
               </div>
               <h2
                 className="section-title text-[#0B3450] mb-4"
@@ -136,7 +136,7 @@ export default function PublicationsPage() {
                 <article
                   className="bg-[#F6FAFB] border border-gray-100 rounded-2xl p-7 flex flex-col h-full card-lift relative"
                 >
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#2BB7C4] rounded-t-2xl" aria-hidden="true" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#80B93C] rounded-t-2xl" aria-hidden="true" />
                   
                   <div className="flex items-center justify-between mb-4 pt-2">
                     <span
@@ -220,7 +220,7 @@ export default function PublicationsPage() {
                         href={`https://doi.org/${pub.doi}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#2BB7C4] hover:underline"
+                        className="text-[#80B93C] hover:underline"
                         style={{ fontFamily: 'var(--font-mono)' }}
                       >
                         {pub.doi}

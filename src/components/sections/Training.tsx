@@ -75,7 +75,7 @@ export default function Training() {
 
                 {/* Hover arrow */}
                 <div className="shrink-0 self-center opacity-0 group-hover:opacity-100 transition-opacity duration-200" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#2BB7C4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#80B93C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M3.75 9h10.5M9 3.75L14.25 9 9 14.25" />
                   </svg>
                 </div>

@@ -1,7 +1,7 @@
 import { INSTRUMENT_GROUPS } from '@/lib/data';
 import ScrollReveal from '@/components/ScrollReveal';
 
-const GROUP_COLORS  = ['#2BB7C4', '#5E8C3A', '#2F6FB0', '#C24E72'];
+const GROUP_COLORS  = ['#80B93C', '#5E8C3A', '#2F6FB0', '#C24E72'];
 const GROUP_ICONS   = [
   'M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18',
   'M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z',
@@ -22,8 +22,8 @@ export default function Instruments() {
         <ScrollReveal>
           <div className="max-w-2xl mb-14">
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Laboratory Infrastructure</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Laboratory Infrastructure</span>
             </div>
             <h2
               id="instruments-heading"

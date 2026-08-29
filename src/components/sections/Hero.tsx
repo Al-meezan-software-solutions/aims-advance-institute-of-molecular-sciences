@@ -65,16 +65,16 @@ export default function Hero() {
             style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}
           >
             Advanced Institute of<br />
-            <span className="text-[#2BB7C4]">Molecular Sciences</span>
+            <span className="text-[#80B93C]">Molecular Sciences</span>
           </h1>
 
           <p
-            className="text-slate-800 mb-3"
+            className="text-[#2BB7C4] mb-3"
             style={{
               fontFamily: 'var(--font-display)',
               fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)',
-              fontWeight: 500,
-              letterSpacing: '0.02em',
+              fontWeight: 600,
+              letterSpacing: '0.04em',
             }}
           >
             For Quality Life
@@ -89,7 +89,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 bg-[#2BB7C4] hover:bg-[#1e9aa6] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
+              className="inline-flex items-center gap-2 bg-[#80B93C] hover:bg-[#6ea030] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Our Services
@@ -99,7 +99,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] text-sm shadow-xs"
+              className="inline-flex items-center gap-2 border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-slate-900 font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#80B93C] text-sm shadow-xs"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Contact Us
@@ -142,7 +142,7 @@ export default function Hero() {
                 {/* Accent dot */}
                 <div
                   className="mt-3 w-6 h-1 rounded-full"
-                  style={{ background: ['#2BB7C4', '#80B93C', '#5E8C3A', '#2F6FB0'][i % 4] }}
+                  style={{ background: ['#80B93C', '#80B93C', '#5E8C3A', '#2F6FB0'][i % 4] }}
                   aria-hidden="true"
                 />
               </div>

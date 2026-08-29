@@ -17,7 +17,7 @@ const CERTIFICATIONS = [
     authority: 'Pakistan National Accreditation Council (PNAC)',
     scope: 'Ensures the highest standard of technical competence, precision of calibration, and reproducible scientific analysis across all molecular, biological, and chemical testing services.',
     status: 'Accredited',
-    color: '#2BB7C4',
+    color: '#80B93C',
   },
   {
     code: 'ISO 9001:2015',
@@ -66,7 +66,7 @@ export default function RegistrationsCertificationsPage() {
         aria-labelledby="certifications-heading"
         className="relative py-20 lg:py-28 bg-[#0B3450] text-white overflow-hidden"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(43,183,196,0.15),transparent_60%)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(128,185,60,0.15),transparent_60%)]" aria-hidden="true" />
         <div className="absolute top-1/2 left-10 -translate-y-1/2 opacity-[0.04] hex-motif" aria-hidden="true">
           <HelixRibbon color="#ffffff" size={360} />
         </div>
@@ -74,9 +74,9 @@ export default function RegistrationsCertificationsPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Institutional Accreditations</span>
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Institutional Accreditations</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
             </div>
             <h1
               id="certifications-heading"
@@ -106,8 +106,8 @@ export default function RegistrationsCertificationsPage() {
             <div className="lg:col-span-1">
               <ScrollReveal>
                 <div className="inline-flex items-center gap-2 mb-4">
-                  <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-                  <span className="eyebrow text-[#2BB7C4]">Compliance Standard</span>
+                  <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+                  <span className="eyebrow text-[#80B93C]">Compliance Standard</span>
                 </div>
                 <h2
                   id="accreditations-heading"
@@ -122,8 +122,8 @@ export default function RegistrationsCertificationsPage() {
                   managers who ensure that lab instruments, workflows, reagents, and research outputs conform 
                   strictly to standard operating procedures.
                 </p>
-                <div className="p-4 rounded-xl border border-[#2BB7C4]/20 bg-[#2BB7C4]/05 flex items-start gap-3">
-                  <svg className="shrink-0 text-[#2BB7C4] mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <div className="p-4 rounded-xl border border-[#80B93C]/20 bg-[#80B93C]/05 flex items-start gap-3">
+                  <svg className="shrink-0 text-[#80B93C] mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
                     <path d="m9 12 2 2 4-4" />
                   </svg>

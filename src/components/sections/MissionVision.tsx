@@ -20,9 +20,9 @@ export default function MissionVision() {
         <ScrollReveal>
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Direction & Purpose</span>
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Direction & Purpose</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
             </div>
             <h2
               id="mission-heading"
@@ -44,7 +44,7 @@ export default function MissionVision() {
               className="scroll-mt-24 bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-gray-100 h-full relative overflow-hidden card-lift"
             >
               {/* Top colour bar */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#2BB7C4] rounded-t-2xl" aria-hidden="true" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-[#80B93C] rounded-t-2xl" aria-hidden="true" />
 
               {/* Large numeral */}
               <div
@@ -75,8 +75,8 @@ export default function MissionVision() {
                 ].map(item => (
                   <li key={item} className="flex gap-3 items-start">
                     <svg className="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                      <circle cx="8" cy="8" r="7.5" fill="#2BB7C418" stroke="#2BB7C4" strokeWidth="1" />
-                      <path d="M5 8l2 2 4-4" stroke="#2BB7C4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                      <circle cx="8" cy="8" r="7.5" fill="#80B93C18" stroke="#80B93C" strokeWidth="1" />
+                      <path d="M5 8l2 2 4-4" stroke="#80B93C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
                     </svg>
                     <span className="text-[#2D3748] text-sm leading-relaxed">{item}</span>
                   </li>

@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-3 mb-5 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded" aria-label="AIMS-PAGE home">
+            <Link href="/" className="inline-flex items-center gap-3 mb-5 focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded" aria-label="AIMS-PAGE home">
               <AimsLogo size={88} />
               <div>
                 <div className="font-bold text-[#0B3450]" style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem' }}>
@@ -54,7 +54,7 @@ export default function Footer() {
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#2BB7C4] hover:bg-[#1e9aa6] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white"
+              className="inline-flex items-center gap-2 bg-[#80B93C] hover:bg-[#6ea030] text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Contact Us
@@ -77,7 +77,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-slate-600 hover:text-[#0B3450] transition-colors duration-150 text-sm focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
+                    className="text-slate-600 hover:text-[#0B3450] transition-colors duration-150 text-sm focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded"
                     style={{ fontFamily: 'var(--font-body)' }}
                   >
                     {link.label}
@@ -98,7 +98,7 @@ export default function Footer() {
             <ul className="space-y-2.5" role="list">
               {DOMAINS.map(d => (
                 <li key={d} className="flex items-start gap-2">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 bg-[#2BB7C4]" aria-hidden="true" />
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 bg-[#80B93C]" aria-hidden="true" />
                   <span className="text-slate-600 text-sm leading-relaxed" style={{ fontFamily: 'var(--font-body)' }}>
                     {d}
                   </span>
@@ -134,8 +134,8 @@ export default function Footer() {
                 },
               ].map(({ icon, label, value }) => (
                 <li key={label} className="flex items-start gap-3">
-                  <div className="mt-0.5 w-7 h-7 rounded-md bg-[#2BB7C4]/8 flex items-center justify-center shrink-0">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2BB7C4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <div className="mt-0.5 w-7 h-7 rounded-md bg-[#80B93C]/8 flex items-center justify-center shrink-0">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#80B93C" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d={icon} />
                     </svg>
                   </div>

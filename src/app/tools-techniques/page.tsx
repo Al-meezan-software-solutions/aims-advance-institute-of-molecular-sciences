@@ -196,9 +196,9 @@ export default function ToolsTechniquesPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Analytical Methodologies</span>
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Analytical Methodologies</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
             </div>
             <h1
               id="tools-heading"
@@ -222,7 +222,7 @@ export default function ToolsTechniquesPage() {
             {TECHNIQUES.map((tech, idx) => (
               <ScrollReveal key={tech.category} delay={idx * 65}>
                 <article className="bg-[#F6FAFB] border border-gray-100 rounded-2xl p-7 flex flex-col h-full card-lift relative">
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#2BB7C4] rounded-t-2xl" aria-hidden="true" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-[#80B93C] rounded-t-2xl" aria-hidden="true" />
                   <h3
                     className="text-[#0B3450] font-bold mb-2 pt-2"
                     style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem' }}
@@ -235,7 +235,7 @@ export default function ToolsTechniquesPage() {
                   <ul className="space-y-3 mt-auto">
                     {tech.methods.map((method, mi) => (
                       <li key={mi} className="flex gap-2.5 items-start">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#2BB7C4] shrink-0" aria-hidden="true" />
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#80B93C] shrink-0" aria-hidden="true" />
                         <span className="text-slate-700 text-xs leading-relaxed">{method}</span>
                       </li>
                     ))}
@@ -261,9 +261,9 @@ export default function ToolsTechniquesPage() {
           <ScrollReveal>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-                <span className="eyebrow text-[#2BB7C4]">Image Demonstrations</span>
-                <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+                <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+                <span className="eyebrow text-[#80B93C]">Image Demonstrations</span>
+                <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
               </div>
               <h2
                 id="images-heading"

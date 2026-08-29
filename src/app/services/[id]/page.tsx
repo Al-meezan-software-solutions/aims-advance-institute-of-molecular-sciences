@@ -171,9 +171,9 @@ export default async function ServiceDetailPage({ params }: Props) {
             <div className="bg-[#F8FAFC] border border-slate-200/80 rounded-3xl p-8 lg:p-12 shadow-xl">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-2 mb-3">
-                  <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-                  <span className="eyebrow text-[#2BB7C4]">Start a Project</span>
-                  <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+                  <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+                  <span className="eyebrow text-[#80B93C]">Start a Project</span>
+                  <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
                 </div>
                 <h2
                   className="section-title text-[#0B3450] mb-2"
@@ -192,7 +192,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                     <label htmlFor="service-name" className="block eyebrow text-[#6B7A8D] mb-1.5">Name</label>
                     <input
                       id="service-name" name="name" type="text" required autoComplete="name"
-                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors bg-white"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors bg-white"
                       placeholder="Dr. Jane Smith"
                     />
                   </div>
@@ -200,7 +200,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                     <label htmlFor="service-org" className="block eyebrow text-[#6B7A8D] mb-1.5">Organisation</label>
                     <input
                       id="service-org" name="organisation" type="text" autoComplete="organization"
-                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors bg-white"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors bg-white"
                       placeholder="University / Company"
                     />
                   </div>
@@ -210,7 +210,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   <label htmlFor="service-email" className="block eyebrow text-[#6B7A8D] mb-1.5">Email</label>
                   <input
                     id="service-email" name="email" type="email" required autoComplete="email"
-                    className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors bg-white"
+                    className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors bg-white"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -222,7 +222,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                       id="service-select"
                       name="service"
                       defaultValue={svc.id}
-                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors bg-white appearance-none pr-10"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors bg-white appearance-none pr-10"
                     >
                       {SERVICES.map(s => (
                         <option key={s.id} value={s.id}>
@@ -240,7 +240,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                   <label htmlFor="service-message" className="block eyebrow text-[#6B7A8D] mb-1.5">Message</label>
                   <textarea
                     id="service-message" name="message" rows={4} required
-                    className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors resize-none bg-white"
+                    className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-350 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors resize-none bg-white"
                     placeholder="Describe your testing, analytical, or research goals…"
                   />
                 </div>

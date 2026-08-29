@@ -16,7 +16,7 @@ function SectionCard({
   title,
   description,
   href,
-  accentColor = '#2BB7C4',
+  accentColor = '#80B93C',
   children,
   delay = 0,
 }: {
@@ -63,7 +63,7 @@ function SectionCard({
           {/* CTA */}
           <Link
             href={href}
-            className="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150 group/cta focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
+            className="inline-flex items-center gap-2 text-sm font-semibold transition-colors duration-150 group/cta focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded"
             style={{ color: accentColor, fontFamily: 'var(--font-body)' }}
           >
             Explore
@@ -148,17 +148,17 @@ export default function Home() {
               style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}
             >
               Advanced Institute of<br />
-              <span className="text-[#2BB7C4]">Molecular Sciences</span>
+              <span className="text-[#80B93C]">Molecular Sciences</span>
             </h1>
 
             <p
-              className="text-white/60 mb-3"
-              style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', fontWeight: 500, letterSpacing: '0.02em' }}
+              className="text-[#2BB7C4] mb-3"
+              style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', fontWeight: 600, letterSpacing: '0.04em' }}
             >
               For Quality Life
             </p>
 
-            <p className="text-white/55 mb-10 leading-relaxed max-w-lg" style={{ fontSize: '0.97rem' }}>
+            <p className="text-white/75 mb-10 leading-relaxed max-w-lg" style={{ fontSize: '0.97rem' }}>
               A multidisciplinary research and testing laboratory delivering authoritative
               molecular analyses across pharmaceutical, agricultural, and environmental domains.
             </p>
@@ -166,7 +166,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 bg-[#2BB7C4] hover:bg-[#1e9aa6] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
+                className="inline-flex items-center gap-2 bg-[#80B93C] hover:bg-[#6ea030] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 Our Services
@@ -176,7 +176,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 border border-white/30 hover:border-white/70 text-white/80 hover:text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] text-sm"
+                className="inline-flex items-center gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] text-sm"
                 style={{ fontFamily: 'var(--font-body)' }}
               >
                 Contact Us
@@ -209,7 +209,7 @@ export default function Home() {
               {/* Highlighted Registrations & Certifications Card */}
               <Link
                 href="/registrations-certifications"
-                className="col-span-2 block group relative rounded-xl overflow-hidden shadow-sm border border-gray-100 card-lift transition-all duration-300 hover:shadow-md focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
+                className="col-span-2 block group relative rounded-xl overflow-hidden shadow-sm border border-gray-100 card-lift transition-all duration-300 hover:shadow-md focus-visible:outline-2 focus-visible:outline-[#80B93C]"
                 style={{
                   background: 'linear-gradient(135deg, #0B3450 0%, #1e5880 100%)',
                 }}
@@ -271,7 +271,7 @@ export default function Home() {
               </div>
               <Link
                 href="/about"
-                className="shrink-0 inline-flex items-center gap-2 text-[#2BB7C4] hover:text-[#1e9aa6] text-sm font-semibold transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded group"
+                className="shrink-0 inline-flex items-center gap-2 text-[#80B93C] hover:text-[#6ea030] text-sm font-semibold transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded group"
               >
                 Learn more
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">
@@ -319,7 +319,7 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-                <Link href="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#2BB7C4] hover:text-[#1e9aa6] transition-colors group focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded">
+                <Link href="/about" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#80B93C] hover:text-[#6ea030] transition-colors group focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded">
                   Our story
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" className="transition-transform group-hover:translate-x-1">
                     <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z" />
@@ -390,7 +390,7 @@ export default function Home() {
               </div>
               <Link
                 href="/services"
-                className="shrink-0 inline-flex items-center gap-2 text-[#2BB7C4] hover:text-[#1e9aa6] text-sm font-semibold transition-colors group focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
+                className="shrink-0 inline-flex items-center gap-2 text-[#80B93C] hover:text-[#6ea030] text-sm font-semibold transition-colors group focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded"
               >
                 All services
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" className="transition-transform group-hover:translate-x-1">
@@ -466,7 +466,7 @@ export default function Home() {
               </div>
               <Link
                 href="/research-units"
-                className="shrink-0 inline-flex items-center gap-2 text-[#2BB7C4] hover:text-[#1e9aa6] text-sm font-semibold transition-colors group focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded"
+                className="shrink-0 inline-flex items-center gap-2 text-[#80B93C] hover:text-[#6ea030] text-sm font-semibold transition-colors group focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded"
               >
                 Explore units
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" className="transition-transform group-hover:translate-x-1">
@@ -649,7 +649,7 @@ export default function Home() {
             >
               {/* Background decoration */}
               <div className="absolute top-0 right-0 opacity-[0.08]" aria-hidden="true">
-                <HexLattice color="#2BB7C4" size={400} />
+                <HexLattice color="#80B93C" size={400} />
               </div>
               <div className="absolute bottom-0 left-0 opacity-[0.03]" aria-hidden="true">
                 <HexLattice color="#0B3450" size={320} />
@@ -677,7 +677,7 @@ export default function Home() {
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 bg-[#2BB7C4] hover:bg-[#1e9aa6] text-white font-semibold px-8 py-3.5 rounded-xl transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
+                    className="inline-flex items-center gap-2 bg-[#80B93C] hover:bg-[#6ea030] text-white font-semibold px-8 py-3.5 rounded-xl transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
                     style={{ fontFamily: 'var(--font-body)' }}
                   >
                     Contact Us
@@ -687,7 +687,7 @@ export default function Home() {
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center gap-2 border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-[#0B3450] bg-white font-medium px-8 py-3.5 rounded-xl transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] text-sm"
+                    className="inline-flex items-center gap-2 border border-slate-300 hover:border-slate-400 text-slate-700 hover:text-[#0B3450] bg-white font-medium px-8 py-3.5 rounded-xl transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#80B93C] text-sm"
                     style={{ fontFamily: 'var(--font-body)' }}
                   >
                     Browse Services

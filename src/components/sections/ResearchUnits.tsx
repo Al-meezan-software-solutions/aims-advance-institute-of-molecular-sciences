@@ -12,8 +12,8 @@ export default function ResearchUnits() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Research Units</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Research Units</span>
             </div>
             <h2
               className="section-title text-[#0B3450] mb-4"
@@ -38,7 +38,7 @@ export default function ResearchUnits() {
                     key={unit.id}
                     href={`#unit-${unit.id}`}
                     role="listitem"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium transition-all duration-200 hover:bg-[#0B3450]/5 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium transition-all duration-200 hover:bg-[#0B3450]/5 focus-visible:outline-2 focus-visible:outline-[#80B93C]"
                     style={{
                       borderColor: `${accent.color}40`,
                       color: accent.color,

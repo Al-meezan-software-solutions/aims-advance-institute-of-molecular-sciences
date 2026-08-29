@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Brand palette ── */
+  /* ── Brand palette (from logo) ── */
   --color-navy:        #0B3450;
   --color-navy-light:  #164e78;
   --color-paper:       #F6FAFB;
@@ -9,11 +9,14 @@
   --color-grey-50:     #F8F9FA;
   --color-grey-100:    #EEF1F4;
   --color-grey-200:    #DDE2E8;
-  --color-grey-600:    #6B7A8D;
+  --color-grey-600:   #6B7A8D;
   --color-grey-800:    #2D3748;
+  /* Sky / DNA blue — secondary accent */
   --color-teal:        #2BB7C4;
   --color-teal-dark:   #1e9aa6;
+  /* Parrot green — primary brand accent */
   --color-lime:        #80B93C;
+  --color-lime-dark:   #6ea030;
 
   /* ── Unit accent colours ── */
   --color-unit1:       #5E8C3A;
@@ -150,7 +153,7 @@ body {
 
 /* ── Gradient text ──────────────────────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #0B3450 0%, #2BB7C4 100%);
+  background: linear-gradient(135deg, #0B3450 0%, #2BB7C4 50%, #80B93C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

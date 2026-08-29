@@ -16,7 +16,7 @@ const TEAM_MEMBERS = [
     credentials: 'Ph.D. in Molecular Biology',
     bio: 'Over 20 years of research leadership in molecular genetics. Dr. Zaman oversees AIMS-PAGE’s research strategic direction and coordinates interdisciplinary partnerships with global and local industrial stakeholders.',
     unit: 'Executive Leadership',
-    avatarColor: 'linear-gradient(135deg, #0B3450 0%, #2BB7C4 100%)',
+    avatarColor: 'linear-gradient(135deg, #0B3450 0%, #80B93C 100%)',
     initials: 'TZ',
     tags: ['Strategic Leadership', 'Molecular Genetics', 'R&D Management'],
   },
@@ -92,9 +92,9 @@ export default function TeamPage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <ScrollReveal>
             <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Scientific Excellence</span>
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+              <span className="eyebrow text-[#80B93C]">Scientific Excellence</span>
+              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
             </div>
             <h1
               id="team-hero-heading"

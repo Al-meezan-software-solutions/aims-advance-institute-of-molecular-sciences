@@ -17,8 +17,8 @@ export default function Contact() {
             <div>
               <ScrollReveal>
                 <div className="inline-flex items-center gap-2 mb-5">
-                  <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-                  <span className="eyebrow text-[#2BB7C4]">Get in Touch</span>
+                  <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+                  <span className="eyebrow text-[#80B93C]">Get in Touch</span>
                 </div>
                 <h2
                   id="contact-heading"
@@ -59,11 +59,11 @@ export default function Contact() {
                     <div key={label} className="flex gap-4 items-start">
                       <div
                         className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                        style={{ background: 'rgba(43,183,196,0.08)' }}
+                        style={{ background: 'rgba(128,185,60,0.08)' }}
                         aria-hidden="true"
                       >
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                          stroke="#2BB7C4" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                          stroke="#80B93C" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
                           <path d={icon} />
                         </svg>
                       </div>
@@ -71,7 +71,7 @@ export default function Contact() {
                         <div className="eyebrow text-slate-400 mb-0.5">{label}</div>
                         {href
                           ? <a href={href}
-                              className="text-slate-700 hover:text-[#0B3450] text-sm transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] rounded">
+                              className="text-slate-700 hover:text-[#0B3450] text-sm transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded">
                               {value}
                             </a>
                           : <span className="text-slate-700 text-sm whitespace-pre-line">{value}</span>
@@ -96,7 +96,7 @@ export default function Contact() {
                     ].map(u => (
                       <li key={u.href}>
                         <a href={u.href}
-                          className="inline-block text-xs px-3 py-1.5 rounded-lg border transition-all duration-150 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
+                          className="inline-block text-xs px-3 py-1.5 rounded-lg border transition-all duration-150 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-[#80B93C]"
                           style={{
                             borderColor: `${u.color}30`,
                             color: u.color,
@@ -128,7 +128,7 @@ export default function Contact() {
                       <label htmlFor="contact-name" className="block eyebrow text-[#6B7A8D] mb-1.5">Name</label>
                       <input
                         id="contact-name" name="name" type="text" required autoComplete="name"
-                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors duration-150 bg-white"
+                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors duration-150 bg-white"
                         placeholder="Dr. Jane Smith"
                       />
                     </div>
@@ -136,7 +136,7 @@ export default function Contact() {
                       <label htmlFor="contact-org" className="block eyebrow text-[#6B7A8D] mb-1.5">Organisation</label>
                       <input
                         id="contact-org" name="organisation" type="text" autoComplete="organization"
-                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors duration-150 bg-white"
+                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors duration-150 bg-white"
                         placeholder="University / Company"
                       />
                     </div>
@@ -146,7 +146,7 @@ export default function Contact() {
                     <label htmlFor="contact-email" className="block eyebrow text-[#6B7A8D] mb-1.5">Email</label>
                     <input
                       id="contact-email" name="email" type="email" required autoComplete="email"
-                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors duration-150 bg-white"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors duration-150 bg-white"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -156,7 +156,7 @@ export default function Contact() {
                     <div className="relative">
                       <select
                         id="contact-service" name="service"
-                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#6B7A8D] text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors duration-150 bg-white appearance-none pr-10"
+                        className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#6B7A8D] text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors duration-150 bg-white appearance-none pr-10"
                       >
                         <option value="">Select a service area…</option>
                         <option value="agri">Agri-Biotechnology Testing</option>
@@ -177,14 +177,14 @@ export default function Contact() {
                     <label htmlFor="contact-message" className="block eyebrow text-[#6B7A8D] mb-1.5">Message</label>
                     <textarea
                       id="contact-message" name="message" rows={4} required
-                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#2BB7C4] focus:ring-1 focus:ring-[#2BB7C4] transition-colors duration-150 resize-none bg-white"
+                      className="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-[#0B3450] placeholder-gray-300 text-sm focus:outline-none focus:border-[#80B93C] focus:ring-1 focus:ring-[#80B93C] transition-colors duration-150 resize-none bg-white"
                       placeholder="Briefly describe your project or inquiry…"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-[#0B3450] hover:bg-[#164e78] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] text-sm"
+                    className="w-full bg-[#0B3450] hover:bg-[#164e78] text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#80B93C] text-sm"
                     style={{ fontFamily: 'var(--font-body)' }}
                   >
                     Send Enquiry
