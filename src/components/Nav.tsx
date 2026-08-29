@@ -92,9 +92,12 @@ export default function Nav() {
   return (
     <>
       {/* ── Top utility bar ───────────────────────────────────── */}
-      <div className="bg-[#F8FAFC] border-b border-slate-200/60 text-slate-600 text-xs py-2 hidden lg:block">
+      <div className="bg-[#F8FAFC] border-b border-slate-200/60 py-2.5 hidden lg:block">
         <div className="max-w-7xl mx-auto px-8 text-center">
-          <span className="font-bold" style={{ fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}>
+          <span
+            className="font-bold text-[#0B3450] text-md"
+            style={{ fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}
+          >
             Advanced Institute of Molecular Sciences — Pharma · Agri · Environmental
           </span>
         </div>
