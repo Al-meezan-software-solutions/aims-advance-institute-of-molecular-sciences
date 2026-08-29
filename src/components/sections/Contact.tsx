@@ -1,7 +1,13 @@
 import ScrollReveal from '@/components/ScrollReveal';
-import AimsLogo from '@/components/AimsLogo';
+import {
+  MAPS_EMBED_URL,
+  MAPS_EXTERNAL_URL,
+  SITE_CONTACT,
+} from '@/lib/contact';
 
 export default function Contact() {
+  const addressMultiline = SITE_CONTACT.addressLines.join('\n');
+
   return (
     <section
       id="contact"
@@ -40,20 +46,20 @@ export default function Contact() {
                     {
                       icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
                       label: 'Email',
-                      value: 'info@aims-page.org',
-                      href: 'mailto:info@aims-page.org',
+                      value: SITE_CONTACT.email,
+                      href: `mailto:${SITE_CONTACT.email}`,
                     },
                     {
                       icon: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z',
                       label: 'Phone',
-                      value: '+1 (000) 000-0000',
-                      href: 'tel:+10000000000',
+                      value: SITE_CONTACT.phoneDisplay,
+                      href: `tel:${SITE_CONTACT.phoneTel}`,
                     },
                     {
                       icon: 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z',
                       label: 'Address',
-                      value: 'AIMS-PAGE Research Campus\nMolecular Sciences Building',
-                      href: undefined,
+                      value: addressMultiline,
+                      href: MAPS_EXTERNAL_URL,
                     },
                   ].map(({ icon, label, value, href }) => (
                     <div key={label} className="flex gap-4 items-start">
@@ -70,10 +76,17 @@ export default function Contact() {
                       <div>
                         <div className="eyebrow text-slate-400 mb-0.5">{label}</div>
                         {href
-                          ? <a href={href}
-                              className="text-slate-700 hover:text-[#0B3450] text-sm transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded">
+                          ? (
+                            <a
+                              href={href}
+                              {...(href.startsWith('http')
+                                ? { target: '_blank', rel: 'noopener noreferrer' }
+                                : {})}
+                              className="text-slate-700 hover:text-[#0B3450] text-sm transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-[#80B93C] rounded whitespace-pre-line"
+                            >
                               {value}
                             </a>
+                          )
                           : <span className="text-slate-700 text-sm whitespace-pre-line">{value}</span>
                         }
                       </div>
@@ -193,6 +206,64 @@ export default function Contact() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </div>
+
+      {/* ── Location map ─────────────────────────────────────── */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-14 lg:py-16">
+          <ScrollReveal>
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-6">
+              <div>
+                <div className="inline-flex items-center gap-2 mb-3">
+                  <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+                  <span className="eyebrow text-[#80B93C]">Find Us</span>
+                </div>
+                <h3
+                  className="text-[#0B3450] font-bold"
+                  style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.35rem, 2.5vw, 1.75rem)' }}
+                >
+                  Our Location
+                </h3>
+                <p className="text-slate-600 text-sm mt-2 max-w-xl leading-relaxed">
+                  {SITE_CONTACT.addressSingle}
+                </p>
+              </div>
+              <a
+                href={MAPS_EXTERNAL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 self-start sm:self-auto text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Open in Google Maps
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M7 17L17 7M17 7H9M17 7v8"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={60}>
+            <div
+              className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100"
+              style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.08)' }}
+            >
+              <iframe
+                title={`Map showing AIMS-PAGE at ${SITE_CONTACT.addressSingle}`}
+                src={MAPS_EMBED_URL}
+                className="w-full h-[320px] sm:h-[400px] lg:h-[440px] border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
