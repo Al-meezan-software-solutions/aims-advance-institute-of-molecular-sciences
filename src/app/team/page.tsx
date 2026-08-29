@@ -7,409 +7,618 @@ import { HexLattice, PetriRings, MolecularGraph } from '@/components/SvgMotifs';
 export const metadata: Metadata = {
   title: 'Our Team — AIMS-PAGE',
   description:
-    'Meet Dr. Muhammad Tahir Shehzad, Senior Scientific Consultant at AIMS-PAGE specializing in environmental analysis, contaminant remediation, and analytical instrumentation.',
+    'Meet the AIMS-PAGE team — environmental science, chemical engineering, and water & wastewater expertise spanning research, consultancy, and industrial delivery.',
 };
 
-const EXPERTISE = [
-  'Trace Metal Analysis',
-  'Heavy Metal Dynamics',
-  'Contaminant Remediation',
-  'Environmental Risk Assessment',
-  'ICP-OES / AAS / GC-MS',
-  'Soil–Water–Plant Systems',
-  'Spatial Analysis',
-  'Multivariate Statistics',
-];
+const TEAM = [
+  {
+    id: 'dr-tahir',
+    name: 'Dr. Muhammad Tahir Shehzad',
+    title: 'Senior Scientific Consultant',
+    unit: 'Environmental & Toxicology',
+    accent: '#80B93C',
+    image: '/team/dr-muhammad-tahir-shehzad.png',
+    imageAlt: 'Portrait of Dr. Muhammad Tahir Shehzad',
+    summary:
+      'Ph.D. Environmental Science with international research at GCER, Australia — specializing in trace metal analysis, contaminant remediation, and analytical precision.',
+    tags: ['ICP-OES / AAS / GC-MS', 'Heavy Metals', 'Risk Assessment', 'Multivariate Statistics'],
+  },
+  {
+    id: 'mudassar-azam',
+    name: 'Engr. Dr. Mudassar Azam',
+    title: 'Chemical Engineering Advisor',
+    unit: 'Chemical Engineering & Research',
+    accent: '#2F6FB0',
+    image: '/team/mudassar-azam.png',
+    imageAlt: 'Portrait of Engr. Dr. Mudassar Azam',
+    summary:
+      'Assistant Professor at University of the Punjab with a Ph.D. from TU Wien — waste-to-energy, wastewater treatment, and advanced materials research.',
+    tags: ['Waste-to-Energy', 'MSW / RDF', 'Process Control', 'Membrane Technology'],
+  },
+  {
+    id: 'sheraz-khan',
+    name: 'Sheraz Khan',
+    title: 'Water & Wastewater Engineering Lead',
+    unit: 'Process Engineering',
+    accent: '#2BB7C4',
+    image: '/team/sheraz-khan.png',
+    imageAlt: 'Portrait of Sheraz Khan',
+    summary:
+      '16+ years designing, commissioning, and rehabilitating water and wastewater infrastructure across Pakistan and Indonesia — 75+ industrial projects delivered.',
+    tags: ['ETP / CETP / STP', 'RO & DAF Systems', 'Plant Rehabilitation', 'Industrial Effluent'],
+  },
+] as const;
 
-const METRICS = [
-  { value: '>350', label: 'Citations', note: 'Google Scholar' },
-  { value: '10', label: 'h-Index', note: 'Google Scholar' },
-  { value: '>60', label: 'Cumulative IF', note: 'Impact Factor' },
-  { value: '23', label: 'Journal Papers', note: '17 peer-reviewed' },
-  { value: '5', label: 'Book Chapters', note: 'Published / in press' },
-];
+const TAHIR = {
+  bio: [
+    'Dr. Muhammad Tahir Shehzad is a senior scientific consultant specializing in advanced environmental analysis, contaminant remediation, and analytical instrumentation calibration. Holding a Ph.D. in Environmental Science and having conducted extensive research at the Global Centre for Environmental Remediation (GCER) in Australia, he brings high-level international expertise to the testing industry.',
+    'Dr. Shehzad offers specialized technical consultancy in trace metal analysis, utilizing state-of-the-art analytical equipment such as Atomic Absorption Spectrometer, ICP-OES and GC-MS. His services include advising on heavy metal dynamics, environmental risk assessments, and soil–water–plant experimental systems, backed by advanced capabilities in spatial analysis and multivariate statistics.',
+  ],
+  metrics: [
+    { value: '>350', label: 'Citations' },
+    { value: '10', label: 'h-Index' },
+    { value: '23', label: 'Journal Papers' },
+    { value: '5', label: 'Book Chapters' },
+  ],
+  credentials: [
+    {
+      year: '2022',
+      degree: 'Ph.D. in Environmental Science',
+      place: 'University of Agriculture Faisalabad · GCER, University of Newcastle, Australia',
+    },
+    {
+      year: '2014',
+      degree: 'M.Phil. in Environmental Science',
+      place: 'PMAS-Arid Agriculture University, Rawalpindi',
+    },
+    {
+      year: '2012',
+      degree: 'B.Sc. (Hons.) Agriculture / Soil Science',
+      place: 'University of Agriculture Faisalabad',
+    },
+  ],
+  publications: [
+    {
+      text: 'Shehzad, M.T. et al. (2022). Impact of water regimes on minimizing the accumulation of arsenic in rice (Oryza sativa L.). Water, Air, and Soil Pollution.',
+      doi: 'https://doi.org/10.1007/s11270-022-05856-7',
+    },
+    {
+      text: 'Shehzad, M.T. et al. (2022). Arsenic concentrations in soil, water and rice grains of rice growing areas of Punjab-Pakistan: Multivariate statistical analysis. Environmental Monitoring and Assessment.',
+      doi: 'https://doi.org/10.1007/s10661-022-09852-z',
+    },
+    {
+      text: 'Bashir, M.H. et al. incl. Shehzad, M.T. (2024). Dust trace metals implications on school’s indoor air quality linked to human health risk at Khurianwala (Pakistan). Atmospheric Environment.',
+      doi: 'https://doi.org/10.1016/j.atmosenv.2024.120889',
+    },
+  ],
+  pdf: '/team/selected-bibliography-dr-tahir.pdf',
+  orcid: 'https://orcid.org/0000-0002-7365-3147',
+};
 
-const JOURNAL_PUBLICATIONS = [
-  {
-    authors: 'Shehzad, M.T.*, M. Sabir, Saifullah, A.B. Siddique, M.M. Rahman and R. Naidu.',
-    year: '2022',
-    title:
-      'Impact of water regimes on minimizing the accumulation of arsenic in rice (Oryza sativa L.).',
-    journal: 'Water, Air, and Soil Pollution',
-    citation: '233(9):1-12',
-    doi: 'https://doi.org/10.1007/s11270-022-05856-7',
-    if: '3.0',
-  },
-  {
-    authors: 'Shehzad, M.T.*, M. Sabir, M. Zia-ur-Rehman, M.A. Zia and R. Naidu.',
-    year: '2022',
-    title:
-      'Arsenic concentrations in soil, water and rice grains of rice growing areas of Punjab-Pakistan: Multivariate statistical analysis.',
-    journal: 'Environmental Monitoring and Assessment',
-    citation: '194(5):1-16',
-    doi: 'https://doi.org/10.1007/s10661-022-09852-z',
-    if: '3.0',
-  },
-  {
-    authors:
-      'Bashir, M.H., A. Rehman, H.R. Ahmad, A. Hedfi, M.B. Ali, F. Boufahja, K. Elmnasri, E. Mahmoudi and M.T. Shehzad*.',
-    year: '2024',
-    title:
-      "Dust trace metals implications on school's indoor air quality linked to human health risk at Khurianwala (Pakistan).",
-    journal: 'Atmospheric Environment',
-    citation: '339:120889',
-    doi: 'https://doi.org/10.1016/j.atmosenv.2024.120889',
-    if: '4.2',
-  },
-  {
-    authors:
-      'Rahman, M.M., M.T. Shehzad, A.K. Nayak, S. Sharma, M. Yeasmin, S. Samanta, R. Correll and R. Naidu.',
-    year: '2020',
-    title:
-      'Health risks from trace elements in muscles of some commonly available fish in Australia and India.',
-    journal: 'Environmental Science and Pollution Research',
-    citation: '27(17):21000-21012',
-    doi: 'https://doi.org/10.1007/s11356-020-08535-6',
-    if: '5.190',
-  },
-  {
-    authors:
-      'Wang, S., L. Wei, L. Zhang, M.T. Shehzad, M.A. Hameed, H. Bashir, Q. Ali, M.Z. Hashmi and M.M. Hussain.',
-    year: '2025',
-    title:
-      'Tillage-regulated impacts of engineered Fe/Zn-humic complexes on lead toxicity and soil biochemical health.',
-    journal: 'International Journal of Phytoremediation',
-    citation: '28:1-12',
-    doi: 'https://doi.org/10.1080/15226514.2025.2579150',
-    if: '4.003',
-  },
-  {
-    authors: 'Bashir, M.H., M. Farhan, T. Samreen and M.T. Shehzad*.',
-    year: '2024',
-    title:
-      'Effectiveness of constructed wetland technology-treated industrial wastewater on the spinach (Spinacia oleracea) health risks and biochar efficiency.',
-    journal: 'Environmental Geochemistry and Health',
-    citation: '46:469',
-    doi: 'https://doi.org/10.1007/s10653-024-02254-2',
-    if: '3.8',
-  },
-];
+const SHERAZ = {
+  bio: [
+    'Over a professional career spanning 16 years, Sheraz Khan has designed, supplied, installed, commissioned, rehabilitated, and troubleshot water and wastewater treatment infrastructure across Pakistan and abroad. His work spans effluent treatment plants (ETPs), combined effluent treatment plants (CETPs), sewage treatment plants (STPs), reverse osmosis (RO) systems, DAF systems, sludge dewatering, self-cleaning screening, fine-bubble aeration, and biological/tertiary treatment upgrades.',
+    'Clientele includes leading names in leather & tanning, textile & denim, apparel, food & beverage, fertilizer, healthcare, and sugar — including multinational operations such as Coca-Cola, Pepsi-Cola International, Interloop, and Aga Khan Hospital, as well as project delivery for clients in Indonesia. Work has been delivered under Sustainable Water Solutions (Pvt) Ltd, Kemtek Traders, and WETS (Water and Energy Technical Solutions).',
+  ],
+  metrics: [
+    { value: '16+', label: 'Years Experience' },
+    { value: '75', label: 'Projects Delivered' },
+    { value: '2', label: 'Countries Served' },
+    { value: '8+', label: 'Industry Sectors' },
+  ],
+  platforms: [
+    'Sustainable Water Solutions (Pvt) Ltd',
+    'Kemtek Traders',
+    'WETS — Water and Energy Technical Solutions',
+  ],
+  sectors: [
+    'Leather & Tanning',
+    'Textile & Denim',
+    'Apparel & Hosiery',
+    'Food & Beverage',
+    'Fertilizers & Pesticides',
+    'Healthcare',
+    'Sugar Milling',
+    'Municipal / CETP',
+  ],
+  highlights: [
+    {
+      year: '2021',
+      title: 'CETP Korangi Industrial Area, Karachi',
+      detail: '8,000 m³/day — design, supply, installation & commissioning; upgraded to activated sludge process.',
+    },
+    {
+      year: '2023–24',
+      title: 'International ETP projects — Indonesia',
+      detail: 'Nogosari Leather, Sumber Setia Jia Abadi (SSJA), and PT. Sayong Adhimukti — full ETP delivery.',
+    },
+    {
+      year: '2025–26',
+      title: 'Major industrial & institutional programmes',
+      detail: 'Style Textile tertiary & biological systems, Pepsi-Cola sludge handling, Aga Khan Hospital Gilgit STP, and ongoing ETP programmes.',
+    },
+  ],
+  pdf: '/team/professional-track-record-2026.pdf',
+};
 
-const BOOK_CHAPTERS = [
-  {
-    authors: 'Shehzad, M.T.*, H. Ghazanfar, M. Hussain, Z. Farooqi, M.M. Hussain and H. Bashir.',
-    year: '2025',
-    title: 'Drought stress influence on tomato: a brief understanding.',
-    book: 'Drought Stress: Review and Recommendations',
-    publisher: 'Springer Nature',
-    doi: 'https://doi.org/10.1007/978-3-031-80610-0_8',
-  },
-  {
-    authors: 'Ali, M., M.Z. Ur Rehman, A. Jamil, M.A. Ayub and M.T. Shehzad.',
-    year: '2023',
-    title: 'Silicon in Soil, Plants, and Environment.',
-    book: 'Beneficial Chemical Elements of Plants: Recent Developments and Future Prospects',
-    publisher: 'John Wiley & Sons',
-    doi: 'https://doi.org/10.1002/9781119691419.ch10',
-  },
-  {
-    authors: 'Farooqi, Z.U.R., A. Kareem, M.A. Ayub, M.M. Hussain, N. Zeeshan and M.T. Shehzad.',
-    year: '2020',
-    title: 'Use of pesticides in agriculture: impacts on soil, plant, and human health.',
-    book: 'Pesticide Contamination in Freshwater and Soil Environs: Impacts, Threats, and Sustainable Remediation',
-    publisher: 'Apple Academic Press',
-    doi: null,
-  },
-];
+const MUDASSAR = {
+  bio: [
+    'Engr. Dr. Mudassar Azam is Assistant Professor at the Institute of Chemical Engineering & Technology, University of the Punjab, Lahore. He holds a Ph.D. in Chemical Engineering (with distinction) from the Technical University of Vienna (TU Wien), Austria, and has more than 15 years of teaching and research experience in chemical engineering education.',
+    'His research focuses on waste management, energy conversion, and environmental sustainability — including municipal solid waste and refuse-derived fuel for waste-to-energy applications, advanced combustion techniques, nanomaterials for energy storage and water treatment, microbial fuel cells, and antifouling membrane technologies.',
+  ],
+  metrics: [
+    { value: '1,301', label: 'Citations' },
+    { value: '18', label: 'h-Index' },
+    { value: '175', label: 'Total Impact Factor' },
+    { value: '15+', label: 'Years Teaching' },
+  ],
+  credentials: [
+    {
+      year: '2020',
+      degree: 'Ph.D. Chemical Engineering (with distinction)',
+      place: 'Technical University of Vienna (TU Wien), Austria',
+    },
+    {
+      year: '2011',
+      degree: 'M.Sc. Chemical Engineering (2nd position)',
+      place: 'Institute of Chemical Engineering & Technology, University of the Punjab',
+    },
+    {
+      year: '2007',
+      degree: 'B.Sc. Chemical Engineering',
+      place: 'Institute of Chemical Engineering & Technology, University of the Punjab',
+    },
+  ],
+  interests: [
+    'Waste-to-energy (MSW / RDF)',
+    'Combustion & co-combustion',
+    'Nanomaterials (MXenes, MOFs)',
+    'Microbial fuel cells',
+    'Membrane & desalination tech',
+    'Process control & separation',
+  ],
+  supervision: [
+    { value: '50', label: 'B.Sc. graduates supervised' },
+    { value: '8', label: 'M.Sc. graduates supervised' },
+    { value: '2', label: 'Ph.D. students (ongoing)' },
+  ],
+  highlights: [
+    {
+      title: 'Industry foundation — Fauji Fertilizer Company',
+      detail: 'Trainee Engineer at Goth Machhi ammonia plant (2007–2008): unit operations, DCS training, boilers, cooling towers, and laboratory procedures.',
+    },
+    {
+      title: 'International research — TU Wien',
+      detail: 'Ph.D. research on combustion of municipal solid waste and refuse-derived fuel with low-rank coal for waste-to-energy concepts.',
+    },
+    {
+      title: 'Recognition',
+      detail: 'Best PhD paper award; IRCA lead auditor ISO 9001:2008; Rotary International GSE scholarship (Indiana, USA); ISWA waste-to-energy study tour (Austria & Germany).',
+    },
+  ],
+  pdf: '/team/cv-mudassar-2026.pdf',
+  scholar: 'https://scholar.google.com/citations?hl=en&user=Gbu7mn8AAAAJ',
+  linkedin: 'https://linkedin.com/in/engr-dr-mudassar-azam-40a54218b',
+};
 
-const CREDENTIALS = [
-  {
-    degree: 'Ph.D. in Environmental Science',
-    year: '2022',
-    institution: 'Institute of Soil and Environmental Sciences, University of Agriculture Faisalabad',
-    detail:
-      'Thesis: Assessment and management of arsenic in rice in Punjab-Pakistan. Foreign research at the Global Centre for Environmental Remediation (GCER), University of Newcastle, Australia.',
-  },
-  {
-    degree: 'M.Phil. in Environmental Science',
-    year: '2014',
-    institution: 'PMAS-Arid Agriculture University, Rawalpindi',
-    detail: 'Thesis: Assessment of heavy metals in soils of urban areas of Rawalpindi.',
-  },
-  {
-    degree: 'B.Sc. (Hons.) Agriculture / Soil Science',
-    year: '2012',
-    institution: 'University of Agriculture Faisalabad',
-    detail: null,
-  },
-];
+function SectionEyebrow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="inline-flex items-center gap-2 mb-3">
+      <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+      <span className="eyebrow text-[#80B93C]">{children}</span>
+    </div>
+  );
+}
 
 export default function TeamPage() {
   return (
     <>
-      {/* ── Hero Banner ────────────────────────────────────────── */}
+      {/* ── Hero ───────────────────────────────────────────────── */}
       <section
         id="team-hero"
         aria-labelledby="team-hero-heading"
         className="relative py-20 lg:py-28 bg-[#0B3450] text-white overflow-hidden"
       >
-        <div className="absolute top-1/2 left-8 -translate-y-1/2 opacity-[0.06] hex-motif" aria-hidden="true">
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            background:
+              'radial-gradient(ellipse 70% 60% at 20% 40%, rgba(43,183,196,0.18), transparent 55%), radial-gradient(ellipse 50% 50% at 85% 20%, rgba(128,185,60,0.12), transparent 50%)',
+          }}
+          aria-hidden="true"
+        />
+        <div className="absolute top-1/2 left-8 -translate-y-1/2 opacity-[0.05]" aria-hidden="true">
           <HexLattice color="#ffffff" size={320} />
         </div>
-        <div className="absolute right-12 top-10 opacity-[0.04] hex-motif" aria-hidden="true">
-          <PetriRings color="#ffffff" size={440} />
+        <div className="absolute right-12 top-10 opacity-[0.04]" aria-hidden="true">
+          <PetriRings color="#ffffff" size={400} />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2 mb-4">
-              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
-              <span className="eyebrow text-[#80B93C]">Scientific Excellence</span>
-              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
+            <div className="max-w-3xl">
+              <SectionEyebrow>
+                <span className="text-[#80B93C]">People &amp; Expertise</span>
+              </SectionEyebrow>
+              <h1
+                id="team-hero-heading"
+                className="section-title mb-5"
+                style={{ fontSize: 'clamp(2.2rem, 5vw, 3.6rem)' }}
+              >
+                Our Team
+              </h1>
+              <p className="text-white/70 leading-relaxed text-sm lg:text-base max-w-2xl">
+                Environmental science, chemical engineering research, and industrial water treatment —
+                united by rigorous method and a shared commitment to quality life.
+              </p>
             </div>
-            <h1
-              id="team-hero-heading"
-              className="section-title mb-6"
-              style={{ fontSize: 'clamp(2.2rem, 5vw, 3.75rem)' }}
-            >
-              Meet Our Team
-            </h1>
-            <p className="text-white/70 max-w-2xl mx-auto leading-relaxed text-sm lg:text-base">
-              International expertise in environmental analysis, contaminant remediation, and
-              analytical precision — guiding AIMS-PAGE clients with rigorous scientific consultancy.
+          </ScrollReveal>
+
+          {/* Roster strip */}
+          <div className="mt-12 lg:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+            {TEAM.map((member, i) => (
+              <ScrollReveal key={member.id} delay={i * 80}>
+                <a
+                  href={`#${member.id}`}
+                  className="group flex gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
+                >
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden shrink-0 bg-white/10">
+                    <Image
+                      src={member.image}
+                      alt=""
+                      fill
+                      sizes="96px"
+                      className="object-cover object-top"
+                      priority={i === 0}
+                    />
+                  </div>
+                  <div className="min-w-0 flex flex-col justify-center">
+                    <span
+                      className="text-[0.65rem] font-semibold uppercase tracking-wider mb-1"
+                      style={{ color: member.accent }}
+                    >
+                      {member.unit}
+                    </span>
+                    <h2
+                      className="text-white font-bold leading-snug group-hover:text-[#2BB7C4] transition-colors"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+                    >
+                      {member.name}
+                    </h2>
+                    <p className="text-white/55 text-xs mt-1">{member.title}</p>
+                  </div>
+                </a>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Intro ──────────────────────────────────────────────── */}
+      <section className="py-14 lg:py-16 bg-white border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+          <ScrollReveal>
+            <p className="text-[#6B7A8D] leading-relaxed text-sm lg:text-[0.95rem]">
+              From molecular-scale environmental analysis and chemical engineering research to
+              full-scale industrial treatment plants, our specialists combine academic depth with
+              operational experience — supporting clients across pharma, agri, textile, and
+              environmental domains.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ── Featured Profile ───────────────────────────────────── */}
-      <section
-        aria-labelledby="profile-heading"
-        className="py-16 lg:py-24 bg-white relative overflow-hidden"
-      >
-        <div className="absolute -top-24 -right-24 opacity-[0.035]" aria-hidden="true">
-          <PetriRings color="#0B3450" size={420} />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-[minmax(0,280px)_1fr] gap-10 lg:gap-14 items-start">
+      {/* ── Dr. Tahir ──────────────────────────────────────────── */}
+      <section id="dr-tahir" aria-labelledby="tahir-heading" className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
             <ScrollReveal direction="left">
               <div className="lg:sticky lg:top-28">
                 <div
-                  className="relative aspect-[4/5] w-full max-w-[280px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-[#F6FAFB]"
-                  style={{ boxShadow: '0 8px 32px rgba(11,52,80,0.10)' }}
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-white"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
                 >
                   <Image
                     src="/team/dr-muhammad-tahir-shehzad.png"
                     alt="Portrait of Dr. Muhammad Tahir Shehzad"
                     fill
-                    sizes="280px"
+                    sizes="260px"
                     className="object-cover object-top"
-                    priority
                   />
                 </div>
-                <div className="mt-5 text-center lg:text-left">
-                  <span
-                    className="eyebrow px-2.5 py-0.5 rounded text-[0.62rem] font-semibold tracking-wider inline-block"
-                    style={{ background: 'rgba(128, 185, 60, 0.12)', color: '#5E8C3A' }}
+                <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
+                  <a
+                    href={TAHIR.orcid}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
                   >
-                    Environmental &amp; Toxicology
-                  </span>
-                  <div className="mt-4 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
-                    <a
-                      href="https://orcid.org/0000-0002-7365-3147"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#2F6FB0] hover:underline"
-                    >
-                      ORCID
-                    </a>
-                    <span className="text-slate-300" aria-hidden="true">
-                      ·
-                    </span>
-                    <a
-                      href="/team/selected-bibliography-dr-tahir.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#2F6FB0] hover:underline"
-                    >
-                      Full bibliography (PDF)
-                    </a>
-                  </div>
+                    ORCID
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a
+                    href={TAHIR.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    Bibliography PDF
+                  </a>
                 </div>
               </div>
             </ScrollReveal>
 
             <ScrollReveal>
-              <div>
-                <h2
-                  id="profile-heading"
-                  className="text-[#0B3450] font-bold leading-tight mb-2"
-                  style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.75rem, 3.5vw, 2.35rem)' }}
-                >
-                  Dr. Muhammad Tahir Shehzad
-                </h2>
-                <p
-                  className="text-[#80B93C] font-semibold mb-1"
-                  style={{ fontFamily: 'var(--font-body)', fontSize: '1.05rem' }}
-                >
-                  Senior Scientific Consultant
-                </p>
-                <p className="text-[#6B7A8D] text-sm mb-6">
-                  Ph.D. in Environmental Science · Research experience at GCER, University of
-                  Newcastle, Australia
-                </p>
+              <SectionEyebrow>Scientific Consultancy</SectionEyebrow>
+              <h2
+                id="tahir-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Dr. Muhammad Tahir Shehzad
+              </h2>
+              <p className="text-[#80B93C] font-semibold mb-6" style={{ fontFamily: 'var(--font-body)' }}>
+                Senior Scientific Consultant
+              </p>
 
-                <div className="space-y-4 text-[#6B7A8D] leading-relaxed text-sm lg:text-[0.95rem]">
-                  <p>
-                    Dr. Muhammad Tahir Shehzad is a senior scientific consultant specializing in
-                    advanced environmental analysis, contaminant remediation, and analytical
-                    instrumentation calibration. Holding a Ph.D. in Environmental Science and having
-                    conducted extensive research at the Global Centre for Environmental Remediation
-                    (GCER) in Australia, he brings high-level international expertise to the testing
-                    industry.
-                  </p>
-                  <p>
-                    Dr. Shehzad offers specialized technical consultancy in trace metal analysis,
-                    utilizing state-of-the-art analytical equipment such as Atomic Absorption
-                    Spectrometer, ICP-OES and GC-MS. His services include advising on heavy metal
-                    dynamics, environmental risk assessments, and soil–water–plant experimental
-                    systems, backed by advanced capabilities in spatial analysis and multivariate
-                    statistics to ensure the highest standards of data accuracy and analytical
-                    precision.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap gap-2 mt-7">
-                  {EXPERTISE.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2.5 py-1 rounded text-[0.72rem] font-medium bg-[#F6FAFB] text-[#0B3450] border border-slate-100"
-                      style={{ fontFamily: 'var(--font-body)' }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {TAHIR.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
               </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {TAHIR.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="bg-white rounded-xl border border-gray-100 px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education
+              </h3>
+              <ul className="space-y-4 mb-10">
+                {TAHIR.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
+                    <span
+                      className="shrink-0 w-12 text-[#80B93C] font-semibold text-sm tabular-nums"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {c.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex items-end justify-between gap-4 mb-4">
+                <h3
+                  className="text-[#0B3450] font-bold"
+                  style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+                >
+                  Selected publications
+                </h3>
+                <a
+                  href={TAHIR.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold text-[#0B3450] hover:text-[#164e78] shrink-0"
+                >
+                  Full PDF ↓
+                </a>
+              </div>
+              <ol className="space-y-3">
+                {TAHIR.publications.map((pub, i) => (
+                  <li
+                    key={pub.doi}
+                    className="bg-white rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
+                  >
+                    <span className="text-[#80B93C] font-semibold mr-2" style={{ fontFamily: 'var(--font-mono)' }}>
+                      {i + 1}.
+                    </span>
+                    {pub.text}{' '}
+                    <a href={pub.doi} target="_blank" rel="noopener noreferrer" className="text-[#2F6FB0] hover:underline">
+                      DOI
+                    </a>
+                  </li>
+                ))}
+              </ol>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* ── Scholarly Metrics ──────────────────────────────────── */}
+      {/* ── Engr. Dr. Mudassar Azam ─────────────────────────────── */}
       <section
-        aria-labelledby="metrics-heading"
-        className="py-14 lg:py-16 bg-[#F6FAFB] border-y border-gray-100"
+        id="mudassar-azam"
+        aria-labelledby="mudassar-heading"
+        className="py-16 lg:py-24 bg-white scroll-mt-28"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal>
-            <h2 id="metrics-heading" className="sr-only">
-              Scholarly metrics
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
-              {METRICS.map((metric) => (
-                <div key={metric.label} className="text-center">
-                  <div
-                    className="text-[#0B3450] font-bold tabular-nums"
-                    style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2rem)' }}
-                  >
-                    {metric.value}
-                  </div>
-                  <div className="text-[#0B3450] text-sm font-semibold mt-1">{metric.label}</div>
-                  <div className="text-[#6B7A8D] text-xs mt-0.5">{metric.note}</div>
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-[#F6FAFB]"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/mudassar-azam.png"
+                    alt="Portrait of Engr. Dr. Mudassar Azam"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-top"
+                  />
                 </div>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+                <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
+                  <a
+                    href={MUDASSAR.scholar}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    Google Scholar
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a
+                    href={MUDASSAR.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    LinkedIn
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a
+                    href={MUDASSAR.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    CV PDF
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
 
-      {/* ── Education ──────────────────────────────────────────── */}
-      <section aria-labelledby="education-heading" className="py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="inline-flex items-center gap-2 mb-3">
-              <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
-              <span className="eyebrow text-[#80B93C]">Academic Credentials</span>
-            </div>
-            <h2
-              id="education-heading"
-              className="section-title text-[#0B3450] mb-10"
-              style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}
-            >
-              Education &amp; Training
-            </h2>
-          </ScrollReveal>
+            <ScrollReveal>
+              <SectionEyebrow>Chemical Engineering &amp; Research</SectionEyebrow>
+              <h2
+                id="mudassar-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Engr. Dr. Mudassar Azam
+              </h2>
+              <p className="text-[#2F6FB0] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Chemical Engineering Advisor
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                Assistant Professor, University of the Punjab · Ph.D. TU Wien, Austria
+              </p>
 
-          <div className="space-y-6 max-w-3xl">
-            {CREDENTIALS.map((item, i) => (
-              <ScrollReveal key={item.degree} delay={i * 50}>
-                <div className="flex gap-4">
-                  <div className="shrink-0 w-16 pt-0.5">
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {MUDASSAR.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {MUDASSAR.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {MUDASSAR.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
                     <span
-                      className="text-[#80B93C] font-semibold text-sm tabular-nums"
+                      className="shrink-0 w-12 text-[#2F6FB0] font-semibold text-sm tabular-nums"
                       style={{ fontFamily: 'var(--font-mono)' }}
                     >
-                      {item.year}
+                      {c.year}
                     </span>
-                  </div>
-                  <div className="pb-6 border-b border-slate-100 flex-1">
-                    <h3
-                      className="text-[#0B3450] font-bold"
-                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Research interests
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-8">
+                {MUDASSAR.interests.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(47,111,176,0.10)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="grid sm:grid-cols-3 gap-3 mb-10">
+                {MUDASSAR.supervision.map((s) => (
+                  <div
+                    key={s.label}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] px-4 py-3 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.25rem' }}
                     >
-                      {item.degree}
-                    </h3>
-                    <p className="text-[#6B7A8D] text-sm mt-1">{item.institution}</p>
-                    {item.detail && (
-                      <p className="text-[#6B7A8D] text-sm mt-2 leading-relaxed">{item.detail}</p>
-                    )}
+                      {s.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-[0.7rem] mt-1">{s.label}</div>
                   </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={160}>
-            <p className="mt-8 text-sm text-[#6B7A8D] max-w-3xl leading-relaxed">
-              Additional appointments and fellowships include an IRSIP research fellowship at the
-              University of Newcastle (Australia), DAAD international training on greenhouse gases
-              (Geisenheim University, Germany), and service as Review Editor for{' '}
-              <em>Frontiers in Plant-Soil Interactions</em>.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ── Selected Bibliography ──────────────────────────────── */}
-      <section
-        aria-labelledby="bibliography-heading"
-        className="py-16 lg:py-24 bg-[#F6FAFB] border-t border-gray-100"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-              <div>
-                <div className="inline-flex items-center gap-2 mb-3">
-                  <span className="w-6 h-px bg-[#80B93C]" aria-hidden="true" />
-                  <span className="eyebrow text-[#80B93C]">Peer-Reviewed Work</span>
-                </div>
-                <h2
-                  id="bibliography-heading"
-                  className="section-title text-[#0B3450]"
-                  style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}
-                >
-                  Selected Bibliography
-                </h2>
+                ))}
               </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {MUDASSAR.highlights.map((h) => (
+                  <li
+                    key={h.title}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] p-5"
+                  >
+                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                  </li>
+                ))}
+              </ul>
+
               <a
-                href="/team/selected-bibliography-dr-tahir.pdf"
+                href={MUDASSAR.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
               >
-                Download PDF
+                Download full CV
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path
                     d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
@@ -420,108 +629,189 @@ export default function TeamPage() {
                   />
                 </svg>
               </a>
-            </div>
-          </ScrollReveal>
-
-          <h3
-            className="text-[#0B3450] font-bold mb-5"
-            style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem' }}
-          >
-            Journal Publications
-          </h3>
-          <ol className="space-y-5 mb-12">
-            {JOURNAL_PUBLICATIONS.map((pub, i) => (
-              <ScrollReveal key={pub.doi} delay={Math.min(i * 40, 200)}>
-                <li className="flex gap-4 bg-white rounded-xl border border-gray-100 p-5 lg:p-6">
-                  <span
-                    className="shrink-0 text-[#80B93C] font-semibold text-sm tabular-nums w-6"
-                    style={{ fontFamily: 'var(--font-mono)' }}
-                    aria-hidden="true"
-                  >
-                    {i + 1}.
-                  </span>
-                  <div className="min-w-0">
-                    <p className="text-[#0B3450] text-sm leading-relaxed">
-                      <span className="text-[#6B7A8D]">{pub.authors} </span>
-                      <span className="font-semibold">{pub.year}. </span>
-                      {pub.title}{' '}
-                      <em>{pub.journal}</em>. {pub.citation}.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-xs">
-                      <a
-                        href={pub.doi}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#2F6FB0] hover:underline break-all"
-                      >
-                        {pub.doi.replace('https://doi.org/', 'DOI: ')}
-                      </a>
-                      <span className="text-slate-400">IF {pub.if}</span>
-                    </div>
-                  </div>
-                </li>
-              </ScrollReveal>
-            ))}
-          </ol>
-
-          <h3
-            className="text-[#0B3450] font-bold mb-5"
-            style={{ fontFamily: 'var(--font-display)', fontSize: '1.1rem' }}
-          >
-            Book Chapters
-          </h3>
-          <ol className="space-y-5">
-            {BOOK_CHAPTERS.map((ch, i) => (
-              <ScrollReveal key={ch.title} delay={Math.min(i * 40, 160)}>
-                <li className="flex gap-4 bg-white rounded-xl border border-gray-100 p-5 lg:p-6">
-                  <span
-                    className="shrink-0 text-[#80B93C] font-semibold text-sm tabular-nums w-6"
-                    style={{ fontFamily: 'var(--font-mono)' }}
-                    aria-hidden="true"
-                  >
-                    {i + 1}.
-                  </span>
-                  <div className="min-w-0">
-                    <p className="text-[#0B3450] text-sm leading-relaxed">
-                      <span className="text-[#6B7A8D]">{ch.authors} </span>
-                      <span className="font-semibold">{ch.year}. </span>
-                      {ch.title} In: <em>{ch.book}</em>. {ch.publisher}.
-                    </p>
-                    {ch.doi && (
-                      <a
-                        href={ch.doi}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block mt-2 text-xs text-[#2F6FB0] hover:underline break-all"
-                      >
-                        {ch.doi.replace('https://doi.org/', 'DOI: ')}
-                      </a>
-                    )}
-                  </div>
-                </li>
-              </ScrollReveal>
-            ))}
-          </ol>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
-      {/* ── Contact CTA ────────────────────────────────────────── */}
-      <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
+      {/* ── Sheraz Khan ────────────────────────────────────────── */}
+      <section id="sheraz-khan" aria-labelledby="sheraz-heading" className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-white"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/sheraz-khan.png"
+                    alt="Portrait of Sheraz Khan"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="mt-5 text-center lg:text-left">
+                  <a
+                    href={SHERAZ.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-semibold text-[#2F6FB0] hover:underline"
+                  >
+                    Professional Track Record 2026 (PDF)
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <SectionEyebrow>Process Engineering</SectionEyebrow>
+              <h2
+                id="sheraz-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Sheraz Khan
+              </h2>
+              <p className="text-[#2BB7C4] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Water &amp; Wastewater Engineering Lead
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                16 Years of Water &amp; Wastewater Engineering Excellence
+              </p>
+
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {SHERAZ.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {SHERAZ.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Delivery platforms
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-8">
+                {SHERAZ.platforms.map((p) => (
+                  <li
+                    key={p}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium bg-[#F6FAFB] text-[#0B3450] border border-slate-100"
+                  >
+                    {p}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Sectors served
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-10">
+                {SHERAZ.sectors.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(43,183,196,0.10)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected programme highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {SHERAZ.highlights.map((h) => (
+                  <li
+                    key={h.title}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] p-5 flex gap-4"
+                  >
+                    <span
+                      className="shrink-0 text-[#2BB7C4] font-semibold text-sm"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {h.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                      <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={SHERAZ.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Download full chronological project list
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ────────────────────────────────────────────────── */}
+      <section className="py-20 lg:py-24 bg-white relative overflow-hidden border-t border-gray-100">
         <div className="absolute -bottom-20 -right-20 opacity-[0.04]" aria-hidden="true">
           <MolecularGraph color="#0B3450" size={480} />
         </div>
-
         <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
           <ScrollReveal>
             <h2
               className="section-title text-[#0B3450] mb-4"
-              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)' }}
+              style={{ fontSize: 'clamp(1.6rem, 3.5vw, 2.3rem)' }}
             >
-              Consult with Our Specialist
+              Work with Our Specialists
             </h2>
             <p className="text-slate-600 mb-8 max-w-lg mx-auto text-sm leading-relaxed">
-              Need guidance on trace metal analysis, environmental risk assessment, or instrumentation
-              calibration? Our scientific consultant is ready to discuss your project.
+              Need environmental analysis, chemical engineering research support, or industrial
+              water treatment engineering? Our team is ready to discuss your project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
