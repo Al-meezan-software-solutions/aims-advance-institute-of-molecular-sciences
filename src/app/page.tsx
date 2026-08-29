@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { STATS, SERVICES, UNITS_ACCENT, CORE_VALUES, TRAINING_COURSES, INSTRUMENT_GROUPS, RESEARCH_UNITS } from '@/lib/data';
-import { HelixRibbon, HexLattice } from '@/components/SvgMotifs';
+import { HexLattice } from '@/components/SvgMotifs';
 import ScrollReveal from '@/components/ScrollReveal';
+import HeroLabVisual from '@/components/hero/HeroLabVisual';
 
 export const metadata: Metadata = {
   title: 'AIMS-PAGE — Advanced Institute of Molecular Sciences',
@@ -184,12 +185,19 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Right: stat cards */}
-          <div id="highlights" className="flex flex-col justify-center py-20 lg:py-28 pl-8 lg:pl-20">
-            <div className="flex justify-center mb-10" aria-hidden="true">
-              <HelixRibbon color="#0B3450" size={200} className="opacity-30" />
+          {/* Right: photorealistic lab visual + stats */}
+          <div id="highlights" className="relative flex flex-col justify-center py-12 lg:py-20 pl-0 sm:pl-4 lg:pl-8 xl:pl-12">
+            <div
+              className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] xl:h-[540px] mb-6 lg:mb-8 lg:-mr-8 xl:-mr-12"
+              style={{
+                zIndex: 2,
+                boxShadow: '0 20px 50px rgba(11,52,80,0.16)',
+              }}
+            >
+              <HeroLabVisual />
             </div>
-            <div className="grid grid-cols-2 gap-4" role="list" aria-label="Key statistics">
+
+            <div className="grid grid-cols-2 gap-4 relative z-10" role="list" aria-label="Key statistics">
               {STATS.map((stat, i) => (
                 <div key={stat.label} role="listitem" className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 card-lift">
                   <div className="stat-num text-[#0B3450] mb-2" style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)' }}>
