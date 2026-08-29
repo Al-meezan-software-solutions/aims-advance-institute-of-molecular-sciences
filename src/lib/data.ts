@@ -7,6 +7,7 @@ export const UNITS_ACCENT = {
   5: { color: "#6750A4", label: "Bioinformatics", tint: "#6750A41F" },
   6: { color: "#A855F7", label: "Nano Formulation & Characterisation", tint: "#A855F71F" },
   7: { color: "#0D9488", label: "Clinical Diagnostics", tint: "#0D94881F" },
+  8: { color: "#0E7490", label: "Bioequivalence & Pharmacokinetics", tint: "#0E74901F" },
 } as const;
 
 // ─── Stat bar ────────────────────────────────────────────────────────────────
@@ -95,6 +96,28 @@ export const SERVICES = [
       "Vaccine and biologics research support",
       "Cosmetics and nutraceutical drug development"
 
+    ],
+  },
+  {
+    id: "bioequivalence-pharmacokinetics",
+    domain: "Bioequivalence & Pharmacokinetic",
+    unitId: 8 as const,
+    bullets: [
+      "Bioequivalence Study Design & Protocol Development",
+      "Pharmacokinetic (PK) Study Design",
+      "Pharmacokinetic Sample Collection & Processing",
+      "Bioanalytical Method Development",
+      "Bioanalytical Method Validation",
+      "Drug Quantification using HPLC/LC-MS/MS",
+      "Pharmacokinetic Parameter Analysis",
+      "Cmax, Tmax, AUC, t½, and Kel Analysis",
+      "Comparative Bioavailability Assessment",
+      "In Vitro–In Vivo Correlation (IVIVC)",
+      "Biodistribution Study Design",
+      "Tissue Distribution & Drug Accumulation Analysis",
+      "Nanoparticle Biodistribution Studies",
+      "Preclinical Pharmacokinetic Studies",
+      "Statistical Analysis & Bioequivalence Evaluation",
     ],
   },
   {
@@ -218,6 +241,21 @@ export const RESEARCH_UNITS = [
       "14-day sterility testing with isolator technology",
       "ICH stability: accelerated, intermediate, and long-term chambers",
       "Biological potency assays: ELISA, cell-based neutralisation, SPR",
+    ],
+  },
+  {
+    id: 8 as const,
+    name: "Bioequivalence & Pharmacokinetics Unit",
+    shortName: "BE & PK",
+    narrative: `The Bioequivalence & Pharmacokinetics Unit supports pharmaceutical development through rigorous study design, bioanalytical quantification, and statistical evaluation of drug exposure. The unit designs and executes bioequivalence and pharmacokinetic protocols, from sample collection and processing through validated HPLC and LC-MS/MS assays. Core deliverables include Cmax, Tmax, AUC, half-life, and elimination-rate analysis, comparative bioavailability assessment, IVIVC, and biodistribution studies — including tissue accumulation and nanoparticle distribution. Preclinical PK programmes and formal bioequivalence statistics help partners generate regulatory-ready evidence of product performance and safety.`,
+    capabilities: [
+      "Bioequivalence and pharmacokinetic study design and protocol development",
+      "Bioanalytical method development and validation (HPLC / LC-MS/MS)",
+      "PK parameter analysis: Cmax, Tmax, AUC, t½, Kel",
+      "Comparative bioavailability and IVIVC studies",
+      "Biodistribution, tissue accumulation, and nanoparticle distribution studies",
+      "Preclinical pharmacokinetic studies",
+      "Statistical analysis and bioequivalence evaluation",
     ],
   },
   {

@@ -4,9 +4,9 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { PetriRings, HelixRibbon } from '@/components/SvgMotifs';
 
 export const metadata: Metadata = {
-  title: 'Clinical Diagnostic Services — AIMS-PAGE',
+  title: 'Clinical Diagnostic & NGS Services — AIMS-PAGE',
   description:
-    'Advanced molecular diagnostics covering Human Diagnostics and Veterinary Diagnostics. Fast, precise, and quality-assured DNA/RNA pathogen testing.',
+    'Advanced molecular diagnostics covering Human Diagnostics, NGS Based Genomic Solutions, and Veterinary Diagnostics.',
 };
 
 export default function ClinicalDiagnosticsPage() {
@@ -35,11 +35,11 @@ export default function ClinicalDiagnosticsPage() {
               className="section-title mb-6"
               style={{ fontSize: 'clamp(2.2rem, 5vw, 3.75rem)' }}
             >
-              Clinical Diagnostic Services
+              Clinical Diagnostic &amp; NGS Services
             </h1>
             <p className="text-white/70 max-w-2xl mx-auto leading-relaxed text-sm lg:text-base">
-              Delivering authoritative diagnostic testing using certified, WHO/ISO-aligned protocols 
-              under rigorous biosafety and quality-assurance systems.
+              Delivering authoritative diagnostic testing and next-generation sequencing solutions
+              using certified, WHO/ISO-aligned protocols under rigorous biosafety and quality-assurance systems.
             </p>
           </ScrollReveal>
         </div>
@@ -48,7 +48,7 @@ export default function ClinicalDiagnosticsPage() {
       {/* ── Selection Portal ────────────────────────────────────── */}
       <section className="py-20 lg:py-28 bg-[#F6FAFB] border-b border-gray-150">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             
             {/* Human Diagnostics Card */}
             <ScrollReveal>
@@ -91,8 +91,48 @@ export default function ClinicalDiagnosticsPage() {
               </div>
             </ScrollReveal>
 
+            {/* NGS Genomic Solutions Card */}
+            <ScrollReveal delay={60}>
+              <div
+                className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm card-lift h-full flex flex-col relative p-8 lg:p-10"
+              >
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#4F46E5]" aria-hidden="true" />
+                <div className="absolute top-6 right-6 opacity-[0.03]" aria-hidden="true">
+                  <HelixRibbon color="#4F46E5" size={150} />
+                </div>
+
+                <div className="flex-1">
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <span className="w-5 h-px bg-[#4F46E5]" aria-hidden="true" />
+                    <span className="eyebrow text-[#4F46E5]">Genomics</span>
+                  </div>
+                  <h2
+                    className="font-bold text-[#0B3450] mb-4"
+                    style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem' }}
+                  >
+                    NGS Based Genomic Solutions
+                  </h2>
+                  <p className="text-slate-550 text-sm leading-relaxed mb-8">
+                    Next-generation sequencing across oncology, hereditary genetics, infectious disease,
+                    microbiome, food, environmental, agri, and reproductive genomics.
+                  </p>
+                </div>
+
+                <Link
+                  href="/clinical-diagnostics/ngs-genomic-solutions"
+                  className="inline-flex items-center justify-center gap-2 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-sm"
+                  style={{ backgroundColor: '#4F46E5', fontFamily: 'var(--font-body)' }}
+                >
+                  Explore NGS Solutions
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                    <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z" />
+                  </svg>
+                </Link>
+              </div>
+            </ScrollReveal>
+
             {/* Veterinary Diagnostics Card */}
-            <ScrollReveal delay={80}>
+            <ScrollReveal delay={120}>
               <div
                 className="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-sm card-lift h-full flex flex-col relative p-8 lg:p-10"
               >

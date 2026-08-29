@@ -16,6 +16,7 @@ const HOME_ITEMS = [
 const RESEARCH_SERVICES_ITEMS = [
   { href: '/services/agri-biotechnology', label: 'Agri-Biotechnology', color: '#5E8C3A' },
   { href: '/services/bio-pharmaceutical', label: 'Bio-Pharmaceutical', color: '#2F6FB0' },
+  { href: '/services/bioequivalence-pharmacokinetics', label: 'Bioequivalence & Pharmacokinetic', color: '#0E7490' },
   { href: '/services/environmental-science', label: 'Environmental Science', color: '#9C7349' },
   { href: '/services/cell-culture-genetics', label: 'Cell Culture & Genetic Engineering', color: '#C24E72' },
   { href: '/services/nano-formulation', label: 'Nano Formulation & Characterisation', color: '#A855F7' },
@@ -26,6 +27,7 @@ const RESEARCH_SERVICES_ITEMS = [
 
 const CLINICAL_DIAGNOSTICS_ITEMS = [
   { href: '/clinical-diagnostics/human', label: 'Human Diagnostics', color: '#0D9488' },
+  { href: '/clinical-diagnostics/ngs-genomic-solutions', label: 'NGS Based Genomic Solutions', color: '#4F46E5' },
   { href: '/clinical-diagnostics/veterinary', label: 'Veterinary Diagnostics', color: '#5E8C3A' },
 ];
 
@@ -49,7 +51,7 @@ const NAV_LINKS = [
     dropdown: RESEARCH_SERVICES_ITEMS,
   },
   {
-    label: 'Clinical Diagnostic Services',
+    label: 'Clinical Diagnostic & NGS Services',
     href: '/clinical-diagnostics',
     dropdown: CLINICAL_DIAGNOSTICS_ITEMS,
   },
@@ -199,7 +201,7 @@ export default function Nav() {
                   {/* Dropdown Menu */}
                   {hasDropdown && link.dropdown && (
                     <div
-                      className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ${link.label === 'Research Services' || link.label === 'Clinical Diagnostic Services' ? 'w-76' : 'w-52'
+                      className={`absolute top-full left-1/2 -translate-x-1/2 pt-2 transition-all duration-200 ${link.label === 'Research Services' || link.label === 'Clinical Diagnostic & NGS Services' ? 'w-76' : 'w-52'
                         } ${isHovered
                           ? 'opacity-100 translate-y-0 pointer-events-auto'
                           : 'opacity-0 -translate-y-2 pointer-events-none'
