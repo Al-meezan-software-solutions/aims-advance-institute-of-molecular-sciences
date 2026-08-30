@@ -99,96 +99,84 @@ export default function Home() {
     <>
       {/* ════════════════════════════════════════════════════
           HERO
+          Each column owns its background — avoids absolute %
+          panels that leave white seams at non-100% zoom.
       ════════════════════════════════════════════════════ */}
       <section
         id="hero"
         aria-labelledby="hero-heading"
-        className="relative overflow-hidden bg-white"
-        style={{ minHeight: 'calc(100vh - 104px)' }}
+        className="relative overflow-x-clip"
       >
-        {/* Left navy panel */}
-        <div
-          className="absolute inset-y-0 left-0 w-full lg:w-[55%] xl:w-[52%]"
-          style={{ background: 'linear-gradient(145deg, #0B3450 0%, #0e3d5c 60%, #103050 100%)' }}
-          aria-hidden="true"
-        />
-        {/* Diagonal divider */}
-        <div
-          className="absolute inset-y-0 hidden lg:block"
-          style={{
-            left: 'calc(55% - 80px)', width: '160px',
-            background: 'linear-gradient(145deg, #0B3450 0%, #0e3d5c 60%, #103050 100%)',
-            clipPath: 'polygon(0 0, 100% 0, 0 100%)', zIndex: 1,
-          }}
-          aria-hidden="true"
-        />
-        {/* Right side — light grey */}
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[50%]" style={{ background: '#F6FAFB' }} aria-hidden="true" />
-
-        {/* Decorative elements */}
-        <div className="absolute top-12 left-8 opacity-[0.06]" aria-hidden="true">
-          <HexLattice color="#ffffff" size={340} />
-        </div>
-        <div className="absolute bottom-0 right-8 opacity-[0.15]" aria-hidden="true">
-          <HexLattice color="#0B3450" size={280} />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-0 min-h-[calc(100vh-104px)]">
-
-          {/* Left: text */}
-          <div className="flex flex-col justify-center py-20 lg:py-28 pr-0 lg:pr-16">
-            <div className="inline-flex items-center gap-2 mb-8 w-fit">
-              <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
-              <span className="eyebrow text-[#2BB7C4]">Pharma · Agri · Environmental</span>
+        <div className="grid lg:grid-cols-2 lg:min-h-[calc(100dvh-11.5rem)]">
+          {/* Left: navy copy column */}
+          <div
+            className="relative flex flex-col justify-center px-6 sm:px-8 lg:px-12 xl:px-16 py-20 lg:py-28"
+            style={{ background: 'linear-gradient(145deg, #0B3450 0%, #0e3d5c 60%, #103050 100%)' }}
+          >
+            <div className="absolute top-12 left-6 sm:left-8 opacity-[0.06] pointer-events-none" aria-hidden="true">
+              <HexLattice color="#ffffff" size={340} />
             </div>
 
-            <h1
-              id="hero-heading"
-              className="text-white mb-6 section-title"
-              style={{ fontSize: 'clamp(2.5rem, 6vw, 4.5rem)' }}
-            >
-              Advanced Institute of<br />
-              <span className="text-[#80B93C]">Molecular Sciences</span>
-            </h1>
+            <div className="relative z-[2] w-full max-w-xl lg:max-w-none xl:max-w-xl">
+              <div className="inline-flex items-center gap-2 mb-8 w-fit">
+                <span className="w-6 h-px bg-[#2BB7C4]" aria-hidden="true" />
+                <span className="eyebrow text-[#2BB7C4]">Pharma · Agri · Environmental</span>
+              </div>
 
-            <p
-              className="text-[#2BB7C4] mb-3"
-              style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', fontWeight: 600, letterSpacing: '0.04em' }}
-            >
-              For Quality Life
-            </p>
-
-            <p className="text-white/75 mb-10 leading-relaxed max-w-lg" style={{ fontSize: '0.97rem' }}>
-              A multidisciplinary research and testing laboratory delivering authoritative
-              molecular analyses across pharmaceutical, agricultural, and environmental domains.
-            </p>
-
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-2 bg-[#80B93C] hover:bg-[#6ea030] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
-                style={{ fontFamily: 'var(--font-body)' }}
+              <h1
+                id="hero-heading"
+                className="text-white mb-6 section-title"
+                style={{ fontSize: 'clamp(2.25rem, 5vw, 4.25rem)' }}
               >
-                Our Services
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                  <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z" />
-                </svg>
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] text-sm"
-                style={{ fontFamily: 'var(--font-body)' }}
+                Advanced Institute of<br />
+                <span className="text-[#80B93C]">Molecular Sciences</span>
+              </h1>
+
+              <p
+                className="text-[#2BB7C4] mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.1rem, 2.5vw, 1.5rem)', fontWeight: 600, letterSpacing: '0.04em' }}
               >
-                Contact Us
-              </Link>
+                For Quality Life
+              </p>
+
+              <p className="text-white/75 mb-10 leading-relaxed max-w-lg" style={{ fontSize: '0.97rem' }}>
+                A multidisciplinary research and testing laboratory delivering authoritative
+                molecular analyses across pharmaceutical, agricultural, and environmental domains.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 bg-[#80B93C] hover:bg-[#6ea030] text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-white text-sm"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  Our Services
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fillRule="evenodd" d="M4 8a.5.5 0 01.5-.5h5.793L8.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 11-.708-.708L10.293 8.5H4.5A.5.5 0 014 8z" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 border border-white/40 hover:border-white text-white hover:bg-white/10 font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4] text-sm"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* Right: photorealistic lab visual + stats */}
-          <div id="highlights" className="relative flex flex-col justify-center py-12 lg:py-20 pl-0 sm:pl-4 lg:pl-8 xl:pl-12">
+          {/* Right: lab visual + stats */}
+          <div
+            id="highlights"
+            className="relative flex flex-col justify-center bg-[#F6FAFB] px-6 sm:px-8 lg:px-10 xl:px-14 py-12 lg:py-20"
+          >
+            <div className="absolute bottom-0 right-6 sm:right-8 opacity-[0.12] pointer-events-none" aria-hidden="true">
+              <HexLattice color="#0B3450" size={280} />
+            </div>
+
             <div
-              className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] xl:h-[540px] mb-6 lg:mb-8 lg:-mr-8 xl:-mr-12"
+              className="relative w-full h-[320px] sm:h-[400px] lg:h-[min(480px,42vh)] xl:h-[540px] mb-6 lg:mb-8"
               style={{
                 zIndex: 2,
                 boxShadow: '0 20px 50px rgba(11,52,80,0.16)',

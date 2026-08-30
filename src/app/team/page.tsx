@@ -7,7 +7,7 @@ import { HexLattice, PetriRings, MolecularGraph } from '@/components/SvgMotifs';
 export const metadata: Metadata = {
   title: 'Our Team — AIMS-PAGE',
   description:
-    'Meet the AIMS-PAGE team — environmental science, chemical engineering, and water & wastewater expertise spanning research, consultancy, and industrial delivery.',
+    'Meet the AIMS-PAGE team — biopharmaceutical production & molecular sciences, environmental science, chemical engineering, and water & wastewater expertise spanning research, consultancy, and industrial delivery.',
 };
 
 const TEAM = [
@@ -46,6 +46,30 @@ const TEAM = [
     summary:
       '16+ years designing, commissioning, and rehabilitating water and wastewater infrastructure across Pakistan and Indonesia — 75+ industrial projects delivered.',
     tags: ['ETP / CETP / STP', 'RO & DAF Systems', 'Plant Rehabilitation', 'Industrial Effluent'],
+  },
+  {
+    id: 'azra-sakhawat',
+    name: 'Dr. Azra Sakhawat',
+    title: 'Research Consultant',
+    unit: 'Biopharmaceuticals & Molecular Biology',
+    accent: '#7C5CBF',
+    image: '/team/azra-sakhawat.png',
+    imageAlt: 'Portrait of Dr. Azra Sakhawat',
+    summary:
+      'Ph.D. Biochemist specializing in recombinant therapeutic proteins, biosimilars, and exosome-based delivery — bridging wet-lab biopharma with computational biology.',
+    tags: ['Recombinant Proteins', 'Biosimilars', 'Exosomes', 'Bioinformatics'],
+  },
+  {
+    id: 'dr-saad-tahir',
+    name: 'Dr. Saad Tahir',
+    title: 'Biopharmaceutical Production & Development Lead',
+    unit: 'Biopharma Production & QC',
+    accent: '#C24E72',
+    image: '/team/dr-saad-tahir.png',
+    imageAlt: 'Portrait of Dr. Saad Tahir',
+    summary:
+      'Ph.D. Molecular Biologist — recombinant protein production, QC, and GMP tech transfer; Senior Lead Manager Production at Searle Biopharmaceuticals.',
+    tags: ['Filgrastim / G-CSF', 'Downstream Processing', 'Bioassays', 'DRAP / GMP'],
   },
 ] as const;
 
@@ -201,6 +225,133 @@ const MUDASSAR = {
   linkedin: 'https://linkedin.com/in/engr-dr-mudassar-azam-40a54218b',
 };
 
+const AZRA = {
+  bio: [
+    'Dr. Azra Sakhawat is a biochemist specializing in human recombinant protein production, purification, and bioassays, with hands-on experience across upstream and downstream biopharmaceutical workflows. As Research Associate at the Biopharmaceutical & Proteomics Lab (BPL), Centre of Excellence in Molecular Biology (CEMB), Lahore, she leads work on biosimilars and therapeutic proteins — including Semaglutide, Filgrastim, and IL-11 — spanning fermentation, quality analysis, pharmacokinetics, and toxicity studies.',
+    'Her toolkit extends from mammalian cell culture, ELISA, HPLC/FPLC, and antibody development to exosome-based therapeutics and computational biology (molecular docking, ADMET profiling, R and Python). She has supervised laboratory staff and students at BPL, taught undergraduate and graduate biochemistry, and serves as a journal reviewer — bringing both production-floor rigor and research depth to AIMS-PAGE laboratory and consultancy programmes.',
+  ],
+  metrics: [
+    { value: 'Ph.D.', label: 'Biochemistry' },
+    { value: '5+', label: 'Journal Papers' },
+    { value: 'CGPA 3.8', label: 'Doctoral Record' },
+    { value: 'BPL / CEMB', label: 'Research Base' },
+  ],
+  credentials: [
+    {
+      year: '2025',
+      degree: 'Ph.D. in Biochemistry (CGPA 3.8)',
+      place:
+        'The University of Lahore — Encapsulation of selected venom peptides with biodegradable nanoparticles for breast cancer treatment',
+    },
+    {
+      year: '2023',
+      degree: 'M.Phil. Biochemistry (CGPA 3.75)',
+      place:
+        'The University of Lahore — Effects of Vitamin C on cancer cell proliferation via de-simulation of proliferative genes',
+    },
+    {
+      year: 'MSc',
+      degree: 'Master of Science in Biochemistry (CGPA 3.55)',
+      place:
+        'The University of Lahore — Cinnamomum zeylanicum aqueous extract and diabetic rat biochemistry / liver histopathology',
+    },
+  ],
+  interests: [
+    'Recombinant therapeutic proteins',
+    'Biosimilars (Semaglutide, Filgrastim, IL-11)',
+    'Exosome therapeutics & delivery',
+    'PK / toxicity & bioassays',
+    'Molecular docking & ADMET',
+    'HPLC / ÄKTA / bioreactor systems',
+  ],
+  publications: [
+    {
+      text: 'Sakhawat A. et al. (2025). PD-L1 targeting in triple negative breast cancer: in silico and in vitro validation of wasp venom peptide MP-1. Medical Oncology.',
+    },
+    {
+      text: 'Akram A., Sakhawat A. et al. (2024). Silibinins and curcumin as promising ligands against mutant cystic fibrosis transmembrane regulator protein. AMB Express.',
+    },
+    {
+      text: 'Sakhawat A. et al. (2023). Natural compound targeting BDNF V66M variant: insights from in silico docking and molecular analysis. AMB Express.',
+    },
+  ],
+  highlights: [
+    {
+      title: 'Biopharmaceutical & Proteomics Lab — CEMB',
+      detail:
+        'Research Associate (2024–present): recombinant DNA workflows, PCR/RT-PCR, ELISA, HPLC/FPLC, mammalian cell culture, and pilot-scale therapeutic protein production supporting clinical studies.',
+    },
+    {
+      title: 'Therapeutic & diagnostic programmes',
+      detail:
+        'Biosimilar and therapeutic protein projects; indigenous PCR reagents and diagnostic kits aligned with biosafety and ISO 9001:2015; antibody development in non-clinical species.',
+    },
+    {
+      title: 'Teaching & peer review',
+      detail:
+        'Lecturer / visiting faculty (Superior College; Oxford College affiliated with University of Sargodha); journal reviewer for Open Exploration and PLOS ONE.',
+    },
+  ],
+  pdf: '/team/cv-azra-sakhawat.pdf',
+  linkedin: 'https://www.linkedin.com/in/azra-sakhawatbb2182162',
+};
+
+const SAAD = {
+  bio: [
+    'Dr. Saad Tahir is a Ph.D. molecular biologist specializing in biopharmaceutical testing, production, and development — with deep expertise in recombinant protein production, purification, quality control, bioassays, and bioprocess development. He currently serves as Senior Lead Manager Production at Searle Biopharmaceuticals (Nextar Pvt. Ltd.), leading indigenous recombinant G-CSF programmes and quality control of biopharmaceuticals.',
+    'Previously Research Officer and Lecturer (Assistant Professor, Adhoc) at the Centre of Excellence in Molecular Biology (CEMB), University of the Punjab (2012–2026), he led technology transfer of Filgrastim to Searle Biosciences, conducted pharmacokinetic and toxicity studies of Semaglutide for BF Biosciences, and managed downstream processing and QC of human recombinant proteins including Filgrastim, Interferon, IL-29, and IL-6. He has also served as Quality Control Manager supporting DRAP-registered technology transfer for Filgrastim downstream processes.',
+  ],
+  metrics: [
+    { value: '24+', label: 'Publications' },
+    { value: 'Ph.D.', label: 'Molecular Biology' },
+    { value: '14+', label: 'Years at CEMB' },
+    { value: 'DRAP', label: 'Tech Transfer' },
+  ],
+  credentials: [
+    {
+      year: '2022',
+      degree: 'Ph.D. Molecular Biology (Biopharmaceuticals)',
+      place: 'Centre of Excellence in Molecular Biology (CEMB), University of the Punjab, Lahore',
+    },
+    {
+      year: '2015',
+      degree: 'M.Phil. Pharmaceutics',
+      place: 'Riphah International University, Lahore',
+    },
+    {
+      year: '2010',
+      degree: 'Pharm-D',
+      place: 'Pakistan',
+    },
+  ],
+  interests: [
+    'Recombinant protein production & purification',
+    'Downstream processing & chromatography',
+    'In-vitro / in-vivo bioassays',
+    'PK studies & toxicity profiling',
+    'Biosimilars (Filgrastim, EPO, IL-11)',
+    'GMP / DRAP regulatory compliance',
+  ],
+  highlights: [
+    {
+      title: 'Searle Biopharmaceuticals — Senior Lead Manager Production',
+      detail:
+        '2026–present: recombinant protein formulation, filling and packing of Filgrastim, Peg-Filgrastim, Adalimumab and Clotinox; facility and downstream design for Erythropoietin and Filgrastim; cell-culture QC lab, SDS-PAGE / IEF, and anticlotting bioassay for Enoxaparin Sodium.',
+    },
+    {
+      title: 'CEMB — Research Officer & Lecturer',
+      detail:
+        '2012–2026: Filgrastim technology transfer to Searle; Semaglutide PK and toxicity studies for BF Biosciences; downstream QC of Filgrastim, Interferon, IL-29, IL-6; exosome production for drug loading; student and lab-staff supervision.',
+    },
+    {
+      title: 'Programmes & achievements',
+      detail:
+        'DRAP-registered lab for human recombinant therapeutic production technology transfer; Ultrapure Taq Polymerase & PCR Mix QC lead; recombinant IL-11 (Oprelvekin) QC optimization; albumin-fusion consensus interferon characterization; insulin biosimilar (ongoing).',
+    },
+  ],
+  pdf: '/team/cv-dr-saad-tahir.docx',
+};
+
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="inline-flex items-center gap-2 mb-3">
@@ -248,8 +399,9 @@ export default function TeamPage() {
                 Our Team
               </h1>
               <p className="text-white/70 leading-relaxed text-sm lg:text-base max-w-2xl">
-                Environmental science, chemical engineering research, and industrial water treatment —
-                united by rigorous method and a shared commitment to quality life.
+                Biochemistry and molecular sciences, environmental analysis, chemical engineering
+                research, and industrial water treatment — united by rigorous method and a shared
+                commitment to quality life.
               </p>
             </div>
           </ScrollReveal>
@@ -299,10 +451,10 @@ export default function TeamPage() {
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
           <ScrollReveal>
             <p className="text-[#6B7A8D] leading-relaxed text-sm lg:text-[0.95rem]">
-              From molecular-scale environmental analysis and chemical engineering research to
-              full-scale industrial treatment plants, our specialists combine academic depth with
-              operational experience — supporting clients across pharma, agri, textile, and
-              environmental domains.
+              From recombinant biopharmaceuticals and molecular-scale environmental analysis to
+              chemical engineering research and full-scale industrial treatment plants, our
+              specialists combine academic depth with operational experience — supporting clients
+              across pharma, agri, textile, and environmental domains.
             </p>
           </ScrollReveal>
         </div>
@@ -796,6 +948,354 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* ── Dr. Azra Sakhawat ──────────────────────────────────── */}
+      <section
+        id="azra-sakhawat"
+        aria-labelledby="azra-heading"
+        className="py-16 lg:py-24 bg-white scroll-mt-28"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-[#F6FAFB]"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/azra-sakhawat.png"
+                    alt="Portrait of Dr. Azra Sakhawat"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
+                  <a
+                    href={AZRA.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    LinkedIn
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a
+                    href={AZRA.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    CV PDF
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <SectionEyebrow>Biopharmaceuticals &amp; Molecular Biology</SectionEyebrow>
+              <h2
+                id="azra-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Dr. Azra Sakhawat
+              </h2>
+              <p className="text-[#7C5CBF] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Research Consultant
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                Ph.D. Biochemist · Research Associate, BPL / CEMB, Lahore
+              </p>
+
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {AZRA.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {AZRA.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {AZRA.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
+                    <span
+                      className="shrink-0 w-12 text-[#7C5CBF] font-semibold text-sm tabular-nums"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {c.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Focus areas
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-10">
+                {AZRA.interests.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(124,92,191,0.12)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected publications
+              </h3>
+              <ol className="space-y-3 mb-10">
+                {AZRA.publications.map((pub, i) => (
+                  <li
+                    key={pub.text.slice(0, 48)}
+                    className="bg-[#F6FAFB] rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
+                  >
+                    <span className="text-[#7C5CBF] font-semibold mr-2" style={{ fontFamily: 'var(--font-mono)' }}>
+                      {i + 1}.
+                    </span>
+                    {pub.text}
+                  </li>
+                ))}
+              </ol>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {AZRA.highlights.map((h) => (
+                  <li
+                    key={h.title}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] p-5"
+                  >
+                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={AZRA.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Download full CV
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Dr. Saad Tahir ─────────────────────────────────────── */}
+      <section
+        id="dr-saad-tahir"
+        aria-labelledby="saad-heading"
+        className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-white"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/dr-saad-tahir.png"
+                    alt="Portrait of Dr. Saad Tahir"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="mt-5 text-center lg:text-left">
+                  <a
+                    href={SAAD.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-semibold text-[#2F6FB0] hover:underline"
+                  >
+                    CV (DOCX)
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <SectionEyebrow>Biopharma Production &amp; QC</SectionEyebrow>
+              <h2
+                id="saad-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Dr. Saad Tahir
+              </h2>
+              <p className="text-[#C24E72] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Biopharmaceutical Production &amp; Development Lead
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                Ph.D. Molecular Biology · Senior Lead Manager Production, Searle Biopharmaceuticals
+              </p>
+
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {SAAD.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {SAAD.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-white px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {SAAD.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
+                    <span
+                      className="shrink-0 w-12 text-[#C24E72] font-semibold text-sm tabular-nums"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {c.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Focus areas
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-10">
+                {SAAD.interests.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(194,78,114,0.12)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {SAAD.highlights.map((h) => (
+                  <li
+                    key={h.title}
+                    className="rounded-xl border border-gray-100 bg-white p-5"
+                  >
+                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={SAAD.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Download full CV
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA ────────────────────────────────────────────────── */}
       <section className="py-20 lg:py-24 bg-white relative overflow-hidden border-t border-gray-100">
         <div className="absolute -bottom-20 -right-20 opacity-[0.04]" aria-hidden="true">
@@ -810,8 +1310,9 @@ export default function TeamPage() {
               Work with Our Specialists
             </h2>
             <p className="text-slate-600 mb-8 max-w-lg mx-auto text-sm leading-relaxed">
-              Need environmental analysis, chemical engineering research support, or industrial
-              water treatment engineering? Our team is ready to discuss your project.
+              Need biopharmaceutical lab support, environmental analysis, chemical engineering
+              research, or industrial water treatment engineering? Our team is ready to discuss
+              your project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link

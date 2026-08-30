@@ -145,7 +145,7 @@ export default function Nav() {
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-0.5" role="list">
+          <ul className="hidden xl:flex items-center gap-0.5" role="list">
             {NAV_LINKS.map(link => {
               const hasDropdown = 'dropdown' in link;
               const isHovered = hoveredLink === link.label;
@@ -241,13 +241,13 @@ export default function Nav() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-flex items-center gap-2 bg-[#0B3450] hover:bg-[#164e78] text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
+              className="hidden sm:inline-flex items-center gap-2 bg-[#0B3450] hover:bg-[#164e78] text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
               style={{ fontFamily: 'var(--font-body)' }}
             >
               Contact Us
             </Link>
             <button
-              className="lg:hidden text-[#0B3450] p-2 rounded-md hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
+              className="xl:hidden text-[#0B3450] p-2 rounded-md hover:bg-gray-100 focus-visible:outline-2 focus-visible:outline-[#2BB7C4]"
               aria-expanded={open}
               aria-controls="mobile-menu"
               aria-label={open ? 'Close menu' : 'Open menu'}
@@ -266,7 +266,7 @@ export default function Nav() {
 
         {/* Mobile drawer */}
         {open && (
-          <div id="mobile-menu" className="lg:hidden border-t border-gray-100 bg-white px-6 pb-6 pt-3 max-h-[85vh] overflow-y-auto">
+          <div id="mobile-menu" className="xl:hidden border-t border-gray-100 bg-white px-6 pb-6 pt-3 max-h-[85vh] overflow-y-auto">
             <ul className="space-y-1" role="list">
               {NAV_LINKS.map(link => {
                 const hasDropdown = 'dropdown' in link;
