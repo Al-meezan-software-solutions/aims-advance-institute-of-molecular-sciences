@@ -12,6 +12,18 @@ export const metadata: Metadata = {
 
 const TEAM = [
   {
+    id: 'azra-sakhawat',
+    name: 'Dr. Azra Sakhawat Khan',
+    title: 'Lab Director & Research Consultant',
+    unit: 'Biopharmaceuticals & Molecular Biology',
+    accent: '#7C5CBF',
+    image: '/team/azra-sakhawat.png',
+    imageAlt: 'Portrait of Dr. Azra Sakhawat Khan',
+    summary:
+      'Ph.D. Biochemist specializing in recombinant therapeutic proteins, biosimilars, and exosome-based delivery — bridging wet-lab biopharma with computational biology.',
+    tags: ['Recombinant Proteins', 'Biosimilars', 'Exosomes', 'Bioinformatics'],
+  },
+  {
     id: 'dr-tahir',
     name: 'Dr. Muhammad Tahir Shehzad',
     title: 'Senior Scientific Consultant',
@@ -46,18 +58,6 @@ const TEAM = [
     summary:
       '16+ years designing, commissioning, and rehabilitating water and wastewater infrastructure across Pakistan and Indonesia — 75+ industrial projects delivered.',
     tags: ['ETP / CETP / STP', 'RO & DAF Systems', 'Plant Rehabilitation', 'Industrial Effluent'],
-  },
-  {
-    id: 'azra-sakhawat',
-    name: 'Dr. Azra Sakhawat',
-    title: 'Research Consultant',
-    unit: 'Biopharmaceuticals & Molecular Biology',
-    accent: '#7C5CBF',
-    image: '/team/azra-sakhawat.png',
-    imageAlt: 'Portrait of Dr. Azra Sakhawat',
-    summary:
-      'Ph.D. Biochemist specializing in recombinant therapeutic proteins, biosimilars, and exosome-based delivery — bridging wet-lab biopharma with computational biology.',
-    tags: ['Recombinant Proteins', 'Biosimilars', 'Exosomes', 'Bioinformatics'],
   },
   {
     id: 'dr-saad-tahir',
@@ -227,31 +227,31 @@ const MUDASSAR = {
 
 const AZRA = {
   bio: [
-    'Dr. Azra Sakhawat is a biochemist specializing in human recombinant protein production, purification, and bioassays, with hands-on experience across upstream and downstream biopharmaceutical workflows. As Research Associate at the Biopharmaceutical & Proteomics Lab (BPL), Centre of Excellence in Molecular Biology (CEMB), Lahore, she leads work on biosimilars and therapeutic proteins — including Semaglutide, Filgrastim, and IL-11 — spanning fermentation, quality analysis, pharmacokinetics, and toxicity studies.',
+    'Dr. Azra Sakhawat Khan is a biochemist specializing in human recombinant protein production, purification, and bioassays, with hands-on experience across upstream and downstream biopharmaceutical workflows. As Research Associate at the Biopharmaceutical & Proteomics Lab (BPL), Centre of Excellence in Molecular Biology (CEMB), Lahore, she leads work on biosimilars and therapeutic proteins — including Semaglutide, Filgrastim, and IL-11 — spanning fermentation, quality analysis, pharmacokinetics, and toxicity studies.',
     'Her toolkit extends from mammalian cell culture, ELISA, HPLC/FPLC, and antibody development to exosome-based therapeutics and computational biology (molecular docking, ADMET profiling, R and Python). She has supervised laboratory staff and students at BPL, taught undergraduate and graduate biochemistry, and serves as a journal reviewer — bringing both production-floor rigor and research depth to AIMS-PAGE laboratory and consultancy programmes.',
   ],
   metrics: [
     { value: 'Ph.D.', label: 'Biochemistry' },
     { value: '5+', label: 'Journal Papers' },
-    { value: 'CGPA 3.8', label: 'Doctoral Record' },
+    { value: 'Lab Director', label: 'AIMS-PAGE' },
     { value: 'BPL / CEMB', label: 'Research Base' },
   ],
   credentials: [
     {
       year: '2025',
-      degree: 'Ph.D. in Biochemistry (CGPA 3.8)',
+      degree: 'Ph.D. in Biochemistry',
       place:
         'The University of Lahore — Encapsulation of selected venom peptides with biodegradable nanoparticles for breast cancer treatment',
     },
     {
       year: '2023',
-      degree: 'M.Phil. Biochemistry (CGPA 3.75)',
+      degree: 'M.Phil. Biochemistry',
       place:
         'The University of Lahore — Effects of Vitamin C on cancer cell proliferation via de-simulation of proliferative genes',
     },
     {
       year: 'MSc',
-      degree: 'Master of Science in Biochemistry (CGPA 3.55)',
+      degree: 'Master of Science in Biochemistry',
       place:
         'The University of Lahore — Cinnamomum zeylanicum aqueous extract and diabetic rat biochemistry / liver histopathology',
     },
@@ -460,8 +460,192 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* ── Dr. Azra Sakhawat Khan ─────────────────────────────── */}
+      <section
+        id="azra-sakhawat"
+        aria-labelledby="azra-heading"
+        className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-[#F6FAFB]"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/azra-sakhawat.png"
+                    alt="Portrait of Dr. Azra Sakhawat Khan"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
+                  <a
+                    href={AZRA.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    LinkedIn
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a
+                    href={AZRA.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    CV PDF
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <SectionEyebrow>Biopharmaceuticals &amp; Molecular Biology</SectionEyebrow>
+              <h2
+                id="azra-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Dr. Azra Sakhawat Khan
+              </h2>
+              <p className="text-[#7C5CBF] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Lab Director &amp; Research Consultant
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                Ph.D. Biochemist · Research Associate, BPL / CEMB, Lahore
+              </p>
+
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {AZRA.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {AZRA.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-white px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {AZRA.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
+                    <span
+                      className="shrink-0 w-12 text-[#7C5CBF] font-semibold text-sm tabular-nums"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {c.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Focus areas
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-10">
+                {AZRA.interests.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(124,92,191,0.12)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected publications
+              </h3>
+              <ol className="space-y-3 mb-10">
+                {AZRA.publications.map((pub, i) => (
+                  <li
+                    key={pub.text.slice(0, 48)}
+                    className="bg-white rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
+                  >
+                    <span className="text-[#7C5CBF] font-semibold mr-2" style={{ fontFamily: 'var(--font-mono)' }}>
+                      {i + 1}.
+                    </span>
+                    {pub.text}
+                  </li>
+                ))}
+              </ol>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {AZRA.highlights.map((h) => (
+                  <li
+                    key={h.title}
+                    className="rounded-xl border border-gray-100 bg-white p-5"
+                  >
+                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={AZRA.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Download full CV
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── Dr. Tahir ──────────────────────────────────────────── */}
-      <section id="dr-tahir" aria-labelledby="tahir-heading" className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28">
+      <section id="dr-tahir" aria-labelledby="tahir-heading" className="py-16 lg:py-24 bg-white scroll-mt-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
             <ScrollReveal direction="left">
@@ -523,7 +707,7 @@ export default function TeamPage() {
                 {TAHIR.metrics.map((m) => (
                   <div
                     key={m.label}
-                    className="bg-white rounded-xl border border-gray-100 px-4 py-4 text-center"
+                    className="bg-[#F6FAFB] rounded-xl border border-gray-100 px-4 py-4 text-center"
                   >
                     <div
                       className="text-[#0B3450] font-bold tabular-nums"
@@ -579,7 +763,7 @@ export default function TeamPage() {
                 {TAHIR.publications.map((pub, i) => (
                   <li
                     key={pub.doi}
-                    className="bg-white rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
+                    className="bg-[#F6FAFB] rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
                   >
                     <span className="text-[#80B93C] font-semibold mr-2" style={{ fontFamily: 'var(--font-mono)' }}>
                       {i + 1}.
@@ -933,190 +1117,6 @@ export default function TeamPage() {
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
               >
                 Download full chronological project list
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path
-                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Dr. Azra Sakhawat ──────────────────────────────────── */}
-      <section
-        id="azra-sakhawat"
-        aria-labelledby="azra-heading"
-        className="py-16 lg:py-24 bg-white scroll-mt-28"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
-            <ScrollReveal direction="left">
-              <div className="lg:sticky lg:top-28">
-                <div
-                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-[#F6FAFB]"
-                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
-                >
-                  <Image
-                    src="/team/azra-sakhawat.png"
-                    alt="Portrait of Dr. Azra Sakhawat"
-                    fill
-                    sizes="260px"
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
-                  <a
-                    href={AZRA.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#2F6FB0] hover:underline"
-                  >
-                    LinkedIn
-                  </a>
-                  <span className="text-slate-300">·</span>
-                  <a
-                    href={AZRA.pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#2F6FB0] hover:underline"
-                  >
-                    CV PDF
-                  </a>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal>
-              <SectionEyebrow>Biopharmaceuticals &amp; Molecular Biology</SectionEyebrow>
-              <h2
-                id="azra-heading"
-                className="text-[#0B3450] font-bold leading-tight mb-2"
-                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
-              >
-                Dr. Azra Sakhawat
-              </h2>
-              <p className="text-[#7C5CBF] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
-                Research Consultant
-              </p>
-              <p className="text-[#6B7A8D] text-sm mb-6">
-                Ph.D. Biochemist · Research Associate, BPL / CEMB, Lahore
-              </p>
-
-              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
-                {AZRA.bio.map((p) => (
-                  <p key={p.slice(0, 40)}>{p}</p>
-                ))}
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-                {AZRA.metrics.map((m) => (
-                  <div
-                    key={m.label}
-                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] px-4 py-4 text-center"
-                  >
-                    <div
-                      className="text-[#0B3450] font-bold tabular-nums"
-                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
-                    >
-                      {m.value}
-                    </div>
-                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <h3
-                className="text-[#0B3450] font-bold mb-4"
-                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
-              >
-                Education
-              </h3>
-              <ul className="space-y-4 mb-8">
-                {AZRA.credentials.map((c) => (
-                  <li key={c.degree} className="flex gap-4">
-                    <span
-                      className="shrink-0 w-12 text-[#7C5CBF] font-semibold text-sm tabular-nums"
-                      style={{ fontFamily: 'var(--font-mono)' }}
-                    >
-                      {c.year}
-                    </span>
-                    <div>
-                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
-                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
-              <h3
-                className="text-[#0B3450] font-bold mb-3"
-                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
-              >
-                Focus areas
-              </h3>
-              <ul className="flex flex-wrap gap-2 mb-10">
-                {AZRA.interests.map((s) => (
-                  <li
-                    key={s}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
-                    style={{ background: 'rgba(124,92,191,0.12)' }}
-                  >
-                    {s}
-                  </li>
-                ))}
-              </ul>
-
-              <h3
-                className="text-[#0B3450] font-bold mb-4"
-                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
-              >
-                Selected publications
-              </h3>
-              <ol className="space-y-3 mb-10">
-                {AZRA.publications.map((pub, i) => (
-                  <li
-                    key={pub.text.slice(0, 48)}
-                    className="bg-[#F6FAFB] rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
-                  >
-                    <span className="text-[#7C5CBF] font-semibold mr-2" style={{ fontFamily: 'var(--font-mono)' }}>
-                      {i + 1}.
-                    </span>
-                    {pub.text}
-                  </li>
-                ))}
-              </ol>
-
-              <h3
-                className="text-[#0B3450] font-bold mb-4"
-                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
-              >
-                Selected highlights
-              </h3>
-              <ul className="space-y-4 mb-6">
-                {AZRA.highlights.map((h) => (
-                  <li
-                    key={h.title}
-                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] p-5"
-                  >
-                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
-                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={AZRA.pdf}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
-              >
-                Download full CV
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path
                     d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
