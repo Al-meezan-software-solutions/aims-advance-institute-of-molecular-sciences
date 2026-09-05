@@ -109,6 +109,11 @@ const TEAM = [
   },
 ] as const;
 
+/** Per-member object-position overrides for roster / profile crops */
+const TEAM_IMAGE_POSITION: Partial<Record<(typeof TEAM)[number]['id'], string>> = {
+  'imtiaz-ahmed': 'center center',
+};
+
 const TAHIR = {
   bio: [
     'Dr. Muhammad Tahir Shehzad is a senior scientific consultant specializing in advanced environmental analysis, contaminant remediation, and analytical instrumentation calibration. Holding a Ph.D. in Environmental Science and having conducted extensive research at the Global Centre for Environmental Remediation (GCER) in Australia, he brings high-level international expertise to the testing industry.',
@@ -634,7 +639,10 @@ export default function TeamPage() {
                       alt=""
                       fill
                       sizes="96px"
-                      className="object-cover object-[center_22%]"
+                      className="object-cover"
+                      style={{
+                        objectPosition: TEAM_IMAGE_POSITION[member.id] ?? 'center 22%',
+                      }}
                       priority={i === 0}
                     />
                   </div>
@@ -693,7 +701,7 @@ export default function TeamPage() {
                     alt="Portrait of Imtiaz Ahmed"
                     fill
                     sizes="260px"
-                    className="object-cover object-[center_22%]"
+                    className="object-cover object-center"
                     priority
                   />
                 </div>
