@@ -12,16 +12,40 @@ export const metadata: Metadata = {
 
 const TEAM = [
   {
+    id: 'imtiaz-ahmed',
+    name: 'Imtiaz Ahmed',
+    title: 'Chief Executive Officer',
+    unit: 'Leadership',
+    accent: '#0B3450',
+    image: '/team/imtiaz-ahmed.jpg',
+    imageAlt: 'Portrait of Imtiaz Ahmed',
+    summary:
+      'CEO of AIMS — three decades building ISO/IEC 17025 accredited calibration laboratories across Pakistan, the Middle East, and Iraq.',
+    tags: ['ISO/IEC 17025', 'Metrology', 'Lab Accreditation', 'QMS Consultancy'],
+  },
+  {
     id: 'azra-sakhawat',
     name: 'Dr. Azra Sakhawat Khan',
     title: 'Lab Director & Research Consultant',
     unit: 'Biopharmaceuticals & Molecular Biology',
     accent: '#7C5CBF',
-    image: '/team/azra-sakhawat.png',
+    image: '/team/azra-sakhawat.jpg',
     imageAlt: 'Portrait of Dr. Azra Sakhawat Khan',
     summary:
       'Ph.D. Biochemist specializing in recombinant therapeutic proteins, biosimilars, and exosome-based delivery — bridging wet-lab biopharma with computational biology.',
     tags: ['Recombinant Proteins', 'Biosimilars', 'Exosomes', 'Bioinformatics'],
+  },
+  {
+    id: 'ayesha-imtiaz',
+    name: 'Ayesha Imtiaz',
+    title: 'Medical Lab Technologist',
+    unit: 'Clinical Laboratory',
+    accent: '#E11D48',
+    image: '/team/ayesha-imtiaz.jpg',
+    imageAlt: 'Portrait of Ayesha Imtiaz',
+    summary:
+      'BS Medical Laboratory Technology graduate with hospital and diagnostic lab internship experience across hematology, histopathology, microbiology, and clinical biochemistry.',
+    tags: ['Hematology', 'Histopathology', 'Microbiology', 'Clinical Chemistry'],
   },
   {
     id: 'dr-tahir',
@@ -70,6 +94,18 @@ const TEAM = [
     summary:
       'Ph.D. Molecular Biologist — recombinant protein production, QC, and GMP tech transfer; Senior Lead Manager Production at Searle Biopharmaceuticals.',
     tags: ['Filgrastim / G-CSF', 'Downstream Processing', 'Bioassays', 'DRAP / GMP'],
+  },
+  {
+    id: 'rizwan-abid',
+    name: 'Dr. Rizwan Abid',
+    title: 'Genomics & Sequencing Specialist',
+    unit: 'Genomics & Molecular Biology',
+    accent: '#D97706',
+    image: '/team/rizwan-abid.jpg',
+    imageAlt: 'Portrait of Dr. Rizwan Abid',
+    summary:
+      'Ph.D. Biochemist specializing in NGS, cancer and epilepsy genomics, and Illumina sequencing workflows — bridging wet-lab genomics with machine learning.',
+    tags: ['NGS / Illumina', 'Whole Exome Sequencing', 'Cancer Genomics', 'Bioinformatics'],
   },
 ] as const;
 
@@ -225,6 +261,67 @@ const MUDASSAR = {
   linkedin: 'https://linkedin.com/in/engr-dr-mudassar-azam-40a54218b',
 };
 
+const IMTIAZ = {
+  bio: [
+    'Imtiaz Ahmed is Chief Executive Officer of AIMS, leading the institute’s strategy across laboratory services, metrology, quality systems, and regional consultancy. His career spans more than three decades building and accrediting ISO/IEC 17025 calibration and testing laboratories in Pakistan, the UAE, Qatar, and Iraq — including founding and operating Al-Meezan Industrial Metrology Services in Lahore.',
+    'He has set up multi-parameter calibration facilities from the ground up, trained technical teams, secured national and regional accreditation, and advised industry across aviation, electrical, textile, pharma, food, oil & gas, automotive, defence, and construction. As an IRCA-registered ISO 9001 lead auditor and ISO/IEC 17025 assessor, he brings board-level leadership grounded in hands-on laboratory excellence.',
+  ],
+  metrics: [
+    { value: '30+', label: 'Years Experience' },
+    { value: '4', label: 'Countries' },
+    { value: 'ISO 17025', label: 'Lab Accreditation' },
+    { value: 'CEO', label: 'AIMS Leadership' },
+  ],
+  credentials: [
+    {
+      year: 'MA',
+      degree: 'M.A. English Literature',
+      place: 'University of the Punjab',
+    },
+    {
+      year: 'BA',
+      degree: 'B.A. (Political Science, Islamic Studies, Arabic)',
+      place: 'University of the Punjab',
+    },
+    {
+      year: 'DAE',
+      degree: 'Diploma of Associate Engineering (Electronics)',
+      place: 'School of Electronics — 130 weeks',
+    },
+  ],
+  interests: [
+    'ISO/IEC 17025 accreditation & CMC',
+    'Electrical & process instrument calibration',
+    'Dimensional & surveying metrology',
+    'Measurement uncertainty & method validation',
+    'QMS consultancy (ISO 9001 / 17025)',
+    'Metrology training & LIMS',
+  ],
+  highlights: [
+    {
+      title: 'AIMS — Chief Executive Officer',
+      detail:
+        'Leading institutional strategy for accredited inspection, testing, calibration, and scientific consultancy — connecting metrology infrastructure with molecular and industrial programmes.',
+    },
+    {
+      title: 'Al-Meezan Industrial Metrology Services — Owner & Managing Director',
+      detail:
+        '2016–present: ISO/IEC 17025 accredited calibration laboratory in Lahore serving aviation, electrical, textile, pharma, food, oil & gas, automotive, defence, engineering, and construction; training and ISO consultancy across Pakistan and the Middle East.',
+    },
+    {
+      title: 'Regional laboratory build-outs — UAE, Qatar & Iraq',
+      detail:
+        'Business Development Manager, Accutech (Dubai) — DAC ISO 17025 accreditation; Manager Calibration, Gray Mackenzie (Qatar & Dubai) — ENAS accreditation; Metrology Supervisor, Modern Surveying Lab (Kurdistan) — 1,800 m² facility, 200+ standards, 52 accredited ranges.',
+    },
+    {
+      title: 'Pakistan Air Force — Precision Measurement Labs',
+      detail:
+        '1992–2008: calibration technician through lab in-charge and technical instructor at PAF Precision Measurement Equipment Calibration Labs; Base Commander’s commendations for outstanding performance.',
+    },
+  ],
+  pdf: '/team/cv-imtiaz-ahmed.docx',
+};
+
 const AZRA = {
   bio: [
     'Dr. Azra Sakhawat Khan is a biochemist specializing in human recombinant protein production, purification, and bioassays, with hands-on experience across upstream and downstream biopharmaceutical workflows. As Research Associate at the Biopharmaceutical & Proteomics Lab (BPL), Centre of Excellence in Molecular Biology (CEMB), Lahore, she leads work on biosimilars and therapeutic proteins — including Semaglutide, Filgrastim, and IL-11 — spanning fermentation, quality analysis, pharmacokinetics, and toxicity studies.',
@@ -352,6 +449,123 @@ const SAAD = {
   pdf: '/team/cv-dr-saad-tahir.docx',
 };
 
+const RIZWAN = {
+  bio: [
+    'Dr. Rizwan Abid is a genomics and molecular biology specialist with more than six years of focused experience in next-generation sequencing, genomic data analysis, and translational research. He currently serves as Genomics and Sequencing Specialist with Visole Group / GMS, supporting Illumina NGS platforms — including MiniSeq, MiSeq i100, NextSeq, and NovaSeq — through protocol optimization, instrument training, troubleshooting, and workshop delivery.',
+    'His research spans cancer genomics, neurological disorders, brain tumors, and genetic markers, with doctoral work on epilepsy-associated molecular signatures using whole-exome sequencing. He has held research posts at the University of the Punjab and as a Guest Researcher at the Manchester Centre for Genomic Medicine (UK), and brings wet-lab molecular methods together with bioinformatics, GWAS, and machine-learning approaches for precision healthcare.',
+  ],
+  metrics: [
+    { value: 'Ph.D.', label: 'Biochemistry' },
+    { value: '11+', label: 'Publications' },
+    { value: '6+', label: 'Years Genomics' },
+    { value: 'Illumina', label: 'NGS Platforms' },
+  ],
+  credentials: [
+    {
+      year: '2024',
+      degree: 'Ph.D. in Biochemistry',
+      place:
+        'University of the Punjab, Lahore — Identification of epilepsy-associated molecular signatures in the human genomic landscape using whole-exome sequencing',
+    },
+    {
+      year: '2013',
+      degree: 'M.Phil. Biochemistry',
+      place:
+        'University of Veterinary and Animal Sciences, Lahore — Biosafety studies of transgenic sugarcane developed by CEMB',
+    },
+    {
+      year: '2010',
+      degree: 'B.S. (Hons.) Biochemistry',
+      place: 'The University of Lahore — Apoptosis as a therapeutic strategy in eosinophilia',
+    },
+  ],
+  interests: [
+    'Next-generation sequencing (Illumina)',
+    'Whole-exome sequencing & GWAS',
+    'Cancer & epilepsy genomics',
+    'Molecular diagnostics (qPCR, ELISA, Sanger)',
+    'Bioinformatics & machine learning',
+    'Immunomodulatory / RA biopharmaceuticals',
+  ],
+  publications: [
+    {
+      text: 'Abid R. et al. (2024). Association of epilepsy and neurological impairments with homozygous recessive missense mutations in ST3GAL5 and CACNA1H — insights through molecular dynamic simulations.',
+    },
+    {
+      text: 'Abid R. et al. (2024). Integrating HRMAS-NMR data and machine learning-assisted profiling of metabolite fluxes to classify low- and high-grade gliomas.',
+    },
+    {
+      text: 'Sahibzada K.I., Abid R. et al. (2025). HCV genotyping and rational computational designing of an immunogenic multiepitope vaccine against genotype 3a. Journal of Computer-Aided Molecular Design.',
+    },
+  ],
+  highlights: [
+    {
+      title: 'Visole Group / GMS — Genomics & Sequencing Specialist',
+      detail:
+        '2024–present: expert support on Illumina NGS platforms; protocol optimization; instrument and data-analysis training; technical troubleshooting; customer workshops and project coordination.',
+    },
+    {
+      title: 'Manchester Centre for Genomic Medicine — Guest Researcher',
+      detail:
+        '2019–2020 (UK): dual-property anti-inflammatory biopharmaceutical for rheumatoid arthritis; cytokine and inflammation mechanisms; qPCR, ELISA, proteomics, GWAS, and clinical collaboration.',
+    },
+    {
+      title: 'University of the Punjab & CEMB — Research Associate',
+      detail:
+        'Biopharmaceutical and Biomarker Discovery Lab (2019–2022); HEC NRPU immunomodulatory cytokines project; earlier CEMB biosafety studies of transgenic sugarcane (2012–2014).',
+    },
+  ],
+  pdf: '/team/cv-rizwan-abid.pdf',
+  linkedin: 'https://www.linkedin.com/in/rizwan-abid-phd-a9362b82',
+  researchgate: 'https://www.researchgate.net/profile/Rizwan-Abid',
+};
+
+const AYESHA = {
+  bio: [
+    'Ayesha Imtiaz is a dedicated, detail-oriented Medical Laboratory Technologist and BS Medical Laboratory Technology graduate with hands-on internship experience in high-volume hospital and diagnostic laboratories. She performs diagnostic testing across hematology, histopathology, microbiology, and clinical biochemistry, with a strong commitment to quality control and biosafety standards.',
+    'Her training includes tissue processing and H&E staining, microbial culture and Gram staining with antibiotic susceptibility support, and operation of automated chemistry and hematology analyzers for routine and special panels — bringing practical bench skills to AIMS laboratory programmes.',
+  ],
+  metrics: [
+    { value: 'BS MLT', label: 'GCU Lahore' },
+    { value: '4', label: 'Lab Disciplines' },
+    { value: 'QC', label: 'Biosafety Focus' },
+    { value: 'Hospital', label: 'Internship Experience' },
+  ],
+  credentials: [
+    {
+      year: '2026',
+      degree: 'BS Medical Laboratory Technology',
+      place: 'Government College University, Lahore (2022–2026)',
+    },
+    {
+      year: '2022',
+      degree: 'FSc (Pre-Medical)',
+      place: 'KIPS College (2020–2022)',
+    },
+  ],
+  interests: [
+    'Hematology & CBC differentials',
+    'Histopathology & H&E staining',
+    'Clinical microbiology & AST',
+    'Clinical chemistry (LFT / RFT / lipids / hormones)',
+    'Automated analyzer operation',
+    'Laboratory QC & biosafety',
+  ],
+  highlights: [
+    {
+      title: 'Genome Center Lahore — Clinical Lab Internship',
+      detail:
+        'July–August 2025: operated automated chemistry analyzers for routine and special panels (LFTs, RFTs, lipid profiles, hormone testing); operated automated hematology analyzers for CBC with 3-part and 5-part differentials.',
+    },
+    {
+      title: 'Mayo Hospital Lahore — Pathology Department',
+      detail:
+        'November–December 2024: histopathology — tissue processing, rotary microtome sectioning, slide preparation, and routine H&E staining; microbiology — specimen culture, Gram staining, pathogen identification support, and antibiotic susceptibility testing.',
+    },
+  ],
+  pdf: '/team/cv-ayesha-imtiaz.pdf',
+};
+
 function SectionEyebrow({ children }: { children: React.ReactNode }) {
   return (
     <div className="inline-flex items-center gap-2 mb-3">
@@ -420,7 +634,7 @@ export default function TeamPage() {
                       alt=""
                       fill
                       sizes="96px"
-                      className="object-cover object-top"
+                      className="object-cover object-[center_22%]"
                       priority={i === 0}
                     />
                   </div>
@@ -460,11 +674,173 @@ export default function TeamPage() {
         </div>
       </section>
 
+      {/* ── Imtiaz Ahmed — CEO ─────────────────────────────────── */}
+      <section
+        id="imtiaz-ahmed"
+        aria-labelledby="imtiaz-heading"
+        className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-white"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/imtiaz-ahmed.jpg"
+                    alt="Portrait of Imtiaz Ahmed"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-[center_22%]"
+                    priority
+                  />
+                </div>
+                <div className="mt-5 text-center lg:text-left">
+                  <a
+                    href={IMTIAZ.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-semibold text-[#2F6FB0] hover:underline"
+                  >
+                    CV (DOCX)
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <SectionEyebrow>Leadership</SectionEyebrow>
+              <h2
+                id="imtiaz-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Imtiaz Ahmed
+              </h2>
+              <p className="text-[#0B3450] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Chief Executive Officer
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                Metrology · ISO/IEC 17025 · Accredited laboratory leadership
+              </p>
+
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {IMTIAZ.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {IMTIAZ.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-white px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education &amp; credentials
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {IMTIAZ.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
+                    <span
+                      className="shrink-0 w-12 text-[#0B3450] font-semibold text-sm tabular-nums"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {c.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Focus areas
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-10">
+                {IMTIAZ.interests.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(11,52,80,0.10)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {IMTIAZ.highlights.map((h) => (
+                  <li key={h.title} className="rounded-xl border border-gray-100 bg-white p-5">
+                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={IMTIAZ.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Download full CV
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* ── Dr. Azra Sakhawat Khan ─────────────────────────────── */}
       <section
         id="azra-sakhawat"
         aria-labelledby="azra-heading"
-        className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28"
+        className="py-16 lg:py-24 bg-white scroll-mt-28"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
@@ -475,11 +851,11 @@ export default function TeamPage() {
                   style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
                 >
                   <Image
-                    src="/team/azra-sakhawat.png"
+                    src="/team/azra-sakhawat.jpg"
                     alt="Portrait of Dr. Azra Sakhawat Khan"
                     fill
                     sizes="260px"
-                    className="object-cover object-top"
+                    className="object-cover object-[center_22%]"
                   />
                 </div>
                 <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
@@ -530,7 +906,7 @@ export default function TeamPage() {
                 {AZRA.metrics.map((m) => (
                   <div
                     key={m.label}
-                    className="rounded-xl border border-gray-100 bg-white px-4 py-4 text-center"
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] px-4 py-4 text-center"
                   >
                     <div
                       className="text-[#0B3450] font-bold tabular-nums"
@@ -594,7 +970,7 @@ export default function TeamPage() {
                 {AZRA.publications.map((pub, i) => (
                   <li
                     key={pub.text.slice(0, 48)}
-                    className="bg-white rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
+                    className="bg-[#F6FAFB] rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
                   >
                     <span className="text-[#7C5CBF] font-semibold mr-2" style={{ fontFamily: 'var(--font-mono)' }}>
                       {i + 1}.
@@ -614,7 +990,7 @@ export default function TeamPage() {
                 {AZRA.highlights.map((h) => (
                   <li
                     key={h.title}
-                    className="rounded-xl border border-gray-100 bg-white p-5"
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] p-5"
                   >
                     <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
                     <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
@@ -659,7 +1035,7 @@ export default function TeamPage() {
                     alt="Portrait of Dr. Muhammad Tahir Shehzad"
                     fill
                     sizes="260px"
-                    className="object-cover object-top"
+                    className="object-cover object-[center_22%]"
                   />
                 </div>
                 <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
@@ -799,7 +1175,7 @@ export default function TeamPage() {
                     alt="Portrait of Engr. Dr. Mudassar Azam"
                     fill
                     sizes="260px"
-                    className="object-cover object-top"
+                    className="object-cover object-[center_22%]"
                   />
                 </div>
                 <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
@@ -985,7 +1361,7 @@ export default function TeamPage() {
                     alt="Portrait of Sheraz Khan"
                     fill
                     sizes="260px"
-                    className="object-cover object-top"
+                    className="object-cover object-[center_22%]"
                   />
                 </div>
                 <div className="mt-5 text-center lg:text-left">
@@ -1151,7 +1527,7 @@ export default function TeamPage() {
                     alt="Portrait of Dr. Saad Tahir"
                     fill
                     sizes="260px"
-                    className="object-cover object-top"
+                    className="object-cover object-[center_22%]"
                   />
                 </div>
                 <div className="mt-5 text-center lg:text-left">
@@ -1276,6 +1652,360 @@ export default function TeamPage() {
 
               <a
                 href={SAAD.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Download full CV
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Dr. Rizwan Abid ────────────────────────────────────── */}
+      <section
+        id="rizwan-abid"
+        aria-labelledby="rizwan-heading"
+        className="py-16 lg:py-24 bg-white scroll-mt-28"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-[#F6FAFB]"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/rizwan-abid.jpg"
+                    alt="Portrait of Dr. Rizwan Abid"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-[center_22%]"
+                  />
+                </div>
+                <div className="mt-5 flex flex-wrap justify-center lg:justify-start gap-3 text-xs">
+                  <a
+                    href={RIZWAN.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    LinkedIn
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a
+                    href={RIZWAN.researchgate}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    ResearchGate
+                  </a>
+                  <span className="text-slate-300">·</span>
+                  <a
+                    href={RIZWAN.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#2F6FB0] hover:underline"
+                  >
+                    CV PDF
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <SectionEyebrow>Genomics &amp; Molecular Biology</SectionEyebrow>
+              <h2
+                id="rizwan-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Dr. Rizwan Abid
+              </h2>
+              <p className="text-[#D97706] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Genomics &amp; Sequencing Specialist
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                Ph.D. Biochemistry · Illumina NGS · Visole Group / GMS, Lahore
+              </p>
+
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {RIZWAN.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {RIZWAN.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {RIZWAN.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
+                    <span
+                      className="shrink-0 w-12 text-[#D97706] font-semibold text-sm tabular-nums"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {c.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Focus areas
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-10">
+                {RIZWAN.interests.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(217,119,6,0.12)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected publications
+              </h3>
+              <ol className="space-y-3 mb-10">
+                {RIZWAN.publications.map((pub, i) => (
+                  <li
+                    key={pub.text.slice(0, 48)}
+                    className="bg-[#F6FAFB] rounded-xl border border-gray-100 p-4 text-sm text-[#6B7A8D] leading-relaxed"
+                  >
+                    <span className="text-[#D97706] font-semibold mr-2" style={{ fontFamily: 'var(--font-mono)' }}>
+                      {i + 1}.
+                    </span>
+                    {pub.text}
+                  </li>
+                ))}
+              </ol>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {RIZWAN.highlights.map((h) => (
+                  <li
+                    key={h.title}
+                    className="rounded-xl border border-gray-100 bg-[#F6FAFB] p-5"
+                  >
+                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={RIZWAN.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"
+              >
+                Download full CV
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Ayesha Imtiaz ──────────────────────────────────────── */}
+      <section
+        id="ayesha-imtiaz"
+        aria-labelledby="ayesha-heading"
+        className="py-16 lg:py-24 bg-[#F6FAFB] scroll-mt-28"
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[260px_1fr] gap-10 lg:gap-14 items-start">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div
+                  className="relative aspect-[4/5] w-full max-w-[260px] mx-auto lg:mx-0 overflow-hidden rounded-2xl bg-white"
+                  style={{ boxShadow: '0 12px 40px rgba(11,52,80,0.10)' }}
+                >
+                  <Image
+                    src="/team/ayesha-imtiaz.jpg"
+                    alt="Portrait of Ayesha Imtiaz"
+                    fill
+                    sizes="260px"
+                    className="object-cover object-[center_22%]"
+                  />
+                </div>
+                <div className="mt-5 text-center lg:text-left">
+                  <a
+                    href={AYESHA.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-semibold text-[#2F6FB0] hover:underline"
+                  >
+                    CV PDF
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal>
+              <SectionEyebrow>Clinical Laboratory</SectionEyebrow>
+              <h2
+                id="ayesha-heading"
+                className="text-[#0B3450] font-bold leading-tight mb-2"
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)' }}
+              >
+                Ayesha Imtiaz
+              </h2>
+              <p className="text-[#E11D48] font-semibold mb-2" style={{ fontFamily: 'var(--font-body)' }}>
+                Medical Lab Technologist
+              </p>
+              <p className="text-[#6B7A8D] text-sm mb-6">
+                BS MLT · Hematology · Histopathology · Microbiology · Clinical Chemistry
+              </p>
+
+              <div className="space-y-4 text-[#6B7A8D] text-sm lg:text-[0.95rem] leading-relaxed mb-8">
+                {AYESHA.bio.map((p) => (
+                  <p key={p.slice(0, 40)}>{p}</p>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+                {AYESHA.metrics.map((m) => (
+                  <div
+                    key={m.label}
+                    className="rounded-xl border border-gray-100 bg-white px-4 py-4 text-center"
+                  >
+                    <div
+                      className="text-[#0B3450] font-bold tabular-nums"
+                      style={{ fontFamily: 'var(--font-display)', fontSize: '1.45rem' }}
+                    >
+                      {m.value}
+                    </div>
+                    <div className="text-[#6B7A8D] text-xs mt-1">{m.label}</div>
+                  </div>
+                ))}
+              </div>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Education
+              </h3>
+              <ul className="space-y-4 mb-8">
+                {AYESHA.credentials.map((c) => (
+                  <li key={c.degree} className="flex gap-4">
+                    <span
+                      className="shrink-0 w-12 text-[#E11D48] font-semibold text-sm tabular-nums"
+                      style={{ fontFamily: 'var(--font-mono)' }}
+                    >
+                      {c.year}
+                    </span>
+                    <div>
+                      <div className="text-[#0B3450] font-semibold text-sm">{c.degree}</div>
+                      <div className="text-[#6B7A8D] text-xs mt-0.5">{c.place}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-3"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Focus areas
+              </h3>
+              <ul className="flex flex-wrap gap-2 mb-10">
+                {AYESHA.interests.map((s) => (
+                  <li
+                    key={s}
+                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-[#0B3450]"
+                    style={{ background: 'rgba(225,29,72,0.12)' }}
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+
+              <h3
+                className="text-[#0B3450] font-bold mb-4"
+                style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem' }}
+              >
+                Selected highlights
+              </h3>
+              <ul className="space-y-4 mb-6">
+                {AYESHA.highlights.map((h) => (
+                  <li key={h.title} className="rounded-xl border border-gray-100 bg-white p-5">
+                    <div className="text-[#0B3450] font-semibold text-sm">{h.title}</div>
+                    <p className="text-[#6B7A8D] text-xs mt-1.5 leading-relaxed">{h.detail}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={AYESHA.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B3450] hover:text-[#164e78] transition-colors"

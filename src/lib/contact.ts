@@ -1,7 +1,7 @@
 /** Shared site contact details — keep Contact page & Footer in sync. */
 
 export const SITE_CONTACT = {
-  email: 'info@aims-page.org',
+  email: 'page@aimscal.com',
   phoneDisplay: '+92 301 4692761',
   phoneTel: '+923014692761',
   addressLines: [
